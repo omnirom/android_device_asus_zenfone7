@@ -163,7 +163,6 @@ vendor.asus.foregroundapp                                         u:object_r:ven
 vendor.asus.thermal_config_id                   u:object_r:vendor_thermal_prop:s0
 vendor.proximity.                                                 u:object_r:vendor_thermal_prop:s0
 vendor.sys.enableDevPerfTHM                                       u:object_r:vendor_asus_prop:s0
-vendor.sys.asus.dongletype                                             u:object_r:vendor_asus_prop:s0
 vendor.thermal.dumpsys                          u:object_r:vendor_thermal_prop:s0
 vendor.thermal.                                 u:object_r:vendor_thermal_prop:s0
 vendor.thermal_                                 u:object_r:vendor_thermal_prop:s0

@@ -252,10 +252,6 @@ PRODUCT_PACKAGES += \
     SecureElement \
     com.android.nfc_extras
 
-# Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.3
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
