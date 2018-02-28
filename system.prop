@@ -5,7 +5,6 @@ ro.vendor.disableaicharging=1
 #
 # system.prop for qssi
 #
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 #rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
