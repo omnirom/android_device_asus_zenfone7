@@ -287,6 +287,9 @@ persist.vendor.fingerprint.type=side
 # Incremental FS
 ro.incremental.enable=true
 
+# Verity
+ro.apk_verity.mode=2
+
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
