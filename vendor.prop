@@ -284,6 +284,9 @@ debug.sf.enable_gl_backpressure=1
 persist.vendor.fingerprint.sensor_location=1080|1040|100|local:4630946802377167489
 persist.vendor.fingerprint.type=side
 
+# Incremental FS
+ro.incremental.enable=true
+
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
