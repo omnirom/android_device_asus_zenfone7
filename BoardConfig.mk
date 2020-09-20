@@ -22,16 +22,22 @@
 # Inherit from asus sm8250-common
 -include device/asus/sm8250-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/asus/rog3
+DEVICE_PATH := device/asus/zenfone7
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
+# Extra Folders
+BOARD_ROOT_EXTRA_FOLDERS += motor_fw1 motor_fw2
+
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/rog3_defconfig
+TARGET_KERNEL_CONFIG := vendor/zf7_defconfig
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
 # inherit from the proprietary version
--include vendor/asus/rog3/BoardConfigVendor.mk
+-include vendor/asus/zenfone7/BoardConfigVendor.mk

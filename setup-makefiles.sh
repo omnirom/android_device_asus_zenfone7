@@ -20,7 +20,7 @@
 set -e
 
 # Required!
-export DEVICE=rog3
+export DEVICE=zenfone7
 export DEVICE_COMMON=sm8250-common
 export VENDOR=asus
 

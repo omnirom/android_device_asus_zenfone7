@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Copyright (c) 2016-2019, The Linux Foundation. All rights reserved
+<!-- Copyright (c) 2016-2020, The Linux Foundation. All rights reserved
      Not a Contribution.
 -->
 <!-- Copyright (C) 2015 The Android Open Source Project
@@ -426,15 +426,15 @@
         </module>
 
         <!-- Remote Submix Audio HAL -->
-        <xi:include href="/vendor/etc/r_submix_audio_policy_configuration_ZS661KS.xml"/>
+        <xi:include href="/vendor/etc/r_submix_audio_policy_configuration_ZS670KS.xml"/>
 
     </modules>
     <!-- End of Modules section -->
 
     <!-- Volume section -->
 
-    <xi:include href="/vendor/etc/audio_policy_volumes_ZS661KS.xml"/>
-    <xi:include href="/vendor/etc/default_volume_tables_ZS661KS.xml"/>
+    <xi:include href="/vendor/etc/audio_policy_volumes_ZS670KS.xml"/>
+    <xi:include href="/vendor/etc/default_volume_tables_ZS670KS.xml"/>
 
     <!-- End of Volume section -->
 

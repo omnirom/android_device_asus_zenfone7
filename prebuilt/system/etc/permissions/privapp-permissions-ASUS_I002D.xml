@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <permissions>
-    <privapp-permissions package="com.asus.gamecenter">
-        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
-        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
-        <permission name="android.permission.READ_WIFI_CREDENTIAL"/>
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="asus.permission.MANAGE_GAME_FIREWALL"/>
-        <permission name="com.asus.permission.HARDWARE_PROPERTIES"/>
-        <permission name="com.asus.permission.MANAGE_AURA_LIGHT"/>
-        <permission name="android.permission.DEVICE_POWER"/>
-    </privapp-permissions>
-
     <!-- Additional permissions on top of privapp-permissions-platform.xml -->
     <privapp-permissions package="com.asus.gamewidget">
         <permission name="com.asus.permission.MANAGE_APP_ASPECT"/>

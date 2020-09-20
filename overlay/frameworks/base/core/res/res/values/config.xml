@@ -21,7 +21,7 @@
     <!-- The list of vendor package signatures that should also be considered
          platform signatures, specifically for use on devices with a vendor partition. -->
     <string-array name="config_vendorPlatformSignatures" translatable="false">
-        <item>308203e1308202c9a003020102020900ac08b4b902e81104300d06092a864886f70d01010b0500308186310b3009060355040613025457310f300d06035504080c0654616977616e310f300d06035504070c065461697065693110300e060355040a0c074173757354656b3110300e060355040b0c0750686f6e6542553110300e06035504030c075a533636314b53311f301d06092a864886f70d0109011610737570706f727440617375732e636f6d3020170d3230303130383037303235345a180f32303531303130393037303235345a308186310b3009060355040613025457310f300d06035504080c0654616977616e310f300d06035504070c065461697065693110300e060355040a0c074173757354656b3110300e060355040b0c0750686f6e6542553110300e06035504030c075a533636314b53311f301d06092a864886f70d0109011610737570706f727440617375732e636f6d30820120300d06092a864886f70d01010105000382010d00308201080282010100cc6ee4f00dced3eeefb5b647f8582e196bce357b8852c29f4a66c836f8b457b816f7e4d96f10a02e435321c7464638be90f9de542eceab134d0c9d071d6011b4b519322b877cbd93ec86fedced6c102fc3b5fe87d18988689a8e3ad8f96ba7cea347547a66420790ee8c2d08850c9947abf12aff82c8ac634b7d2dc52e94553b62ea929313c2831d352f92242e1f1cec68f6ad07c1f3e778895ad95bd0c59eac916242d958e7a775740b489018e9e798590cd63193459da7ed865b0abe0334ca3bef5eb457899589f8f3b7b13579b29fea5ca76e62e3aba05d299b9d9fe585361fe909ba2575ce6821dc7aeed6a70ab0cbb2ecf63036a32a472840ef9d8915d9020103a350304e301d0603551d0e041604140970668cd57468b9f8faea33ae8200d8218a6f67301f0603551d230418301680140970668cd57468b9f8faea33ae8200d8218a6f67300c0603551d13040530030101ff300d06092a864886f70d01010b05000382010100aadbf7d21cf431d3ea6e656100e54dae7ba7db0fad919a4c247062f16b67b7b2c116028dd0154cca949685c62bcfffed15832bff756ed38fbbc191f7b3bff43c3d8884c04db00b05981b233e7e940397f70ac45793ba860b32ecf45361ba9199e361b99ec8cc197c57107c16549fa4696d516d0db927bb3956ba4aa141d96696a41f3b7ca06699bab59d2ed60384398a60e65a2202cef71ffa89e5227a632114c8dbb19ef4bd4673bae163bdea27b2dc9321b4d9a67e29abac35488e276be1e18e964ae6511ee83eb79f5724611fa52e63bcd6d4a552836063bbef12930698acfadc2916650f7f75fd818607b5e3247cfff4b683d714e2752501a6c35812d194</item>
+        <item>30820407308202efa003020102020900e7ced1b79c4dd6da300d06092a864886f70d01010b0500308199310b300906035504061302434e3110300e06035504080c074a69616e677375310f300d06035504070c0653757a686f75311e301c060355040a0c154153555354656b20434f4d505554455220494e432e31163014060355040b0c0d4657205226442043656e7465723110300e06035504030c075a533636304b53311d301b06092a864886f70d010901160e61646d696e40617375732e636f6d301e170d3139313131353133323034385a170d3437303430323133323034385a308199310b300906035504061302434e3110300e06035504080c074a69616e677375310f300d06035504070c0653757a686f75311e301c060355040a0c154153555354656b20434f4d505554455220494e432e31163014060355040b0c0d4657205226442043656e7465723110300e06035504030c075a533636304b53311d301b06092a864886f70d010901160e61646d696e40617375732e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100c7498dbe3bcaa4630c76672fadad39c096331cce3132a1bc3c0ed9e37c6a42618dd67db3714d26e6597c3af29258b7b2732c1128ac0fc058356829bd9b571065dc0a80cbbe988b92ffa3be41742328ac322c52d5b607e6942df3f88d158cdf2c1fd9828aaf864cc680076dc80e08dab992056491b1229fd9391f0a4d6b073872b25b073acd60937e778ae5b7733a529a87be3cd86f257cceeb3f8edd6a230c3d9722c8b9c817c099c6795ffa70c9d096f9560615e50756985bb40509861622307892360a2362869e6bcd19d4b6cafefc26938e53f15ed3beeb405db221c52ae44efc882ee815f2552e40b5167c557efba956c8245a78b6b99a318eecbad2b3430203010001a350304e301d0603551d0e04160414ee58f29d7f979b55eed811de502413f9fd7a1794301f0603551d23041830168014ee58f29d7f979b55eed811de502413f9fd7a1794300c0603551d13040530030101ff300d06092a864886f70d01010b0500038201010073e76ecc6a6bce553026cc918b78779a6b785ccf5d5cb32353a87ced9204019b49ad1dd3740618c109ca3e5004005feca847f859b28df09b40276f472b7d874a427a97e47f453179355e98ef240b5db2dad575a0a0f03dadf7b977ed75f5e3afbd4111e260c81ab0c7c8c11199d0c958da967363059c5949785a7379948e372ee9654971294ccb987bc973bc5fa49b9cd7e8eb7d52e3b39110b2a61d16ab7b1854a6d14f8444f93d694c4a97de0f0aa7c7fdd982c1202d267724044715bc7c619f940f340415be33eaf942275d1290e0f72cc3a597b52476ddb795e16dd4020ad81a0662b3df7b575f8c88f7ce43aba188e51bb20626c3c2a05059b361aa19c0</item>
     </string-array>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
@@ -85,19 +85,19 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>8</item>
+        <item>7</item>
         <item>11</item>
         <item>35</item>
         <item>53</item>
         <item>67</item>
-        <item>82</item>
-        <item>105</item>
+        <item>81</item>
+        <item>104</item>
         <item>118</item>
         <item>129</item>
         <item>138</item>
         <item>152</item>
         <item>164</item>
-        <item>178</item>
+        <item>176</item>
         <item>228</item>
         <item>263</item>
         <item>291</item>
@@ -106,10 +106,10 @@
         <item>314</item>
         <item>319</item>
         <item>399</item>
-        <item>480</item>
-        <item>558</item>
-        <item>639</item>
-        <item>1600</item>
+        <item>450</item>
+        <item>450</item>
+        <item>450</item>
+        <item>450</item>
     </array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
@@ -120,20 +120,20 @@
 
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
-        <item>6</item>
-        <item>8</item>
+        <item>2</item>
+        <item>7</item>
         <item>11</item>
         <item>35</item>
         <item>53</item>
         <item>67</item>
-        <item>82</item>
-        <item>105</item>
+        <item>81</item>
+        <item>104</item>
         <item>118</item>
         <item>129</item>
         <item>138</item>
         <item>152</item>
         <item>164</item>
-        <item>178</item>
+        <item>176</item>
         <item>228</item>
         <item>263</item>
         <item>291</item>
@@ -141,7 +141,8 @@
         <item>311</item>
         <item>314</item>
         <item>319</item>
-        <item>387</item>
+        <item>399</item>
+        <item>450</item>
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -149,27 +150,28 @@
 
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
+        <item>1</item>
         <item>4</item>
-        <item>5</item>
-        <item>7</item>
-        <item>23</item>
-        <item>35</item>
-        <item>44</item>
-        <item>54</item>
-        <item>69</item>
+        <item>6</item>
+        <item>20</item>
+        <item>30</item>
+        <item>38</item>
+        <item>46</item>
+        <item>59</item>
+        <item>67</item>
+        <item>73</item>
         <item>78</item>
-        <item>85</item>
-        <item>91</item>
+        <item>86</item>
+        <item>93</item>
         <item>100</item>
-        <item>108</item>
-        <item>117</item>
-        <item>150</item>
-        <item>173</item>
-        <item>192</item>
-        <item>200</item>
-        <item>205</item>
-        <item>207</item>
-        <item>210</item>
+        <item>129</item>
+        <item>149</item>
+        <item>165</item>
+        <item>172</item>
+        <item>176</item>
+        <item>178</item>
+        <item>181</item>
+        <item>226</item>
         <item>255</item>
     </integer-array>
 
@@ -194,10 +196,4 @@
     <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
 
-    <!-- Whether the always on display mode is available. -->
-    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-
-    <!-- Control whether the always on display mode is enabled by default. This value will be used
-         during initialization when the setting is still null. -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
 </resources>

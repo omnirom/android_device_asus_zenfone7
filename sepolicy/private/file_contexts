@@ -1,0 +1,3 @@
+# Files in rootfs
+/motor_fw1(/.*)?		u:object_r:log_file:s0
+/motor_fw2(/.*)?		u:object_r:log_file:s0
