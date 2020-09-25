@@ -196,4 +196,9 @@
     <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
 
+    <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.qti.slaservice/com.qti.slaservice.SLAService</item>
+        <item>com.qti.slaservice/com.qti.slaservice.SLABootReceiver</item>
+    </string-array>
+
 </resources>
