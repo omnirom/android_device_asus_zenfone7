@@ -38,9 +38,15 @@ priv-app/AsusCamera/lib/arm64/libyuv_util.so
 priv-app/AsusCamera/lib/arm64/libUndistort.so
 priv-app/AsusCamera/lib/arm64/libasusundistort.so
 priv-app/AsusCamera/lib/arm64/libarcsoft_object_tracking.so
+
+# Motor
+etc/permissions/asus.hardware.motor.latch_lock.xml
 -priv-app/MotorService/MotorService.apk;PRESIGNED
 priv-app/MotorService/lib/arm64/libAsusMotorDriverHAL.so
 priv-app/MotorService/lib/arm64/libjni_motor.so
+-priv-app/MotorK/MotorK.apk;PRESIGNED
+priv-app/MotorK/lib/arm64/libAsusMotorDriverHAL.so
+priv-app/MotorK/lib/arm64/libmotork-jni.so
 
 # Gallery
 -priv-app/AsusGallery/AsusGallery.apk;PRESIGNED
