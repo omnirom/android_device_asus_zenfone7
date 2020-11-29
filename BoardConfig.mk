@@ -34,7 +34,6 @@ BOARD_ROOT_EXTRA_FOLDERS += motor_fw1 motor_fw2
 TARGET_KERNEL_CONFIG := vendor/zf7_defconfig
 
 # Properties
-TARGET_OTA_ASSERT_DEVICE := ASUS_I002D
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Sepolicy
