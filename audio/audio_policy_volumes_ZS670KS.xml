@@ -105,12 +105,6 @@ volume index from 0 to 100.
         <point>66,-3600</point>
         <point>100,-2400</point>
     </volume>
-    <volume stream="AUDIO_STREAM_ALARM" deviceCategory="DEVICE_CATEGORY_HEADSET_nonEU">
-        <point>1,-5400</point>
-        <point>33,-4200</point>
-        <point>66,-3000</point>
-        <point>100,-1800</point>
-    </volume>
     <volume stream="AUDIO_STREAM_ALARM" deviceCategory="DEVICE_CATEGORY_SPEAKER">
         <point>1,-4500</point>
         <point>33,-3000</point>
@@ -236,4 +230,3 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_PATCH" deviceCategory="DEVICE_CATEGORY_HEARING_AID"
                                         ref="FULL_SCALE_VOLUME_CURVE"/>
 </volumes>
-
