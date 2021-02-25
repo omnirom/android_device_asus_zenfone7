@@ -117,9 +117,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
@@ -351,9 +348,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_HOST_PACKAGES += \
     brillo_update_payload
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # Vibrator
 PRODUCT_PACKAGES += \
