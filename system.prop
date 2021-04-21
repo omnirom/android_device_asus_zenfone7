@@ -1,18 +1,3 @@
-#ASUS_BSP Add for Dirac sound effect feature
-ro.vendor.dirac.acs.controller=gef
-ro.vendor.dirac.acs.storeSettings=1
-ro.vendor.dirac.acs.ignore_error=1
-ro.vendor.dirac.gef.int.did=0xF,0x313
-ro.vendor.dirac.gef.ext.did=0xA,0x2D
-ro.vendor.dirac.gef.int.tid=0x10012D00,0x10012D02
-ro.vendor.dirac.gef.int.mid=0x10012DE0,0x10012DE2
-ro.vendor.dirac.gef.ext.mid=0x10012DE1
-ro.vendor.dirac.config=16
-
-#ASUS_BSP_SZ: ZF7 add gfx driver apk
-ro.gfx.driver.0=com.asus.gpudrivers.sm8250.zs670ks.api29
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm8250.api29
-
 vendor.camera.cam10.crop_region=2:0,0,4032,3024;6:728,546,3304,2478;3:1584,1189,2448,1836
 vendor.camera.cam11.crop_region=4:0,0,4032,3024;7:728,546,3304,2478;5:1584,1189,2448,1836
 vendor.camera.ai_scene_mode=2:1;3:1;4:1;5:1;6:1;7:1;8:0;9:0;10:1;11:1
