@@ -30,6 +30,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 # Extra Folders
 BOARD_ROOT_EXTRA_FOLDERS += motor_fw1 motor_fw2
 
+#HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/vendor_framework_compatibility_matrix.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := vendor/zf7_defconfig
 
