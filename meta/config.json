@@ -1,8 +1,8 @@
 {
-    "model": "Zenfone 7",
-    "pageUrl":"https://www.androidfilehost.com/?fid=17248734326145684286",
+    "model": "Zenfone 7/7pro",
+    "pageUrl":"https://dl.omnirom.org/zenfone7/",
     "make": "Asus",
     "image": "meta/device_image.jpg",
-    "state": "unofficial",
+    "state": "Official",
     "device": "zenfone7"
 }
