@@ -222,3 +222,7 @@ persist.vendor.data.iwlan.enable=true
 ro.hardware.fingerprint=goodixfp
 ro.vendor.asus.scale_very_low_max_amp=50
 ro.vendor.asus.scale_low_max_amp=130
+
+# Chipset
+ro.soc.manufacturer=QTI
+ro.soc.model=SM8250
