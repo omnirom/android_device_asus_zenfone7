@@ -4,5 +4,11 @@
     "repository": "android_device_asus_sm8250-common",
     "target_path": "device/asus/sm8250-common",
     "revision": "android-11"
-  }
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_kernel_asus_sm8250",
+    "target_path": "kernel/asus/sm8250",
+    "revision": "android-11"
+  },
 ]

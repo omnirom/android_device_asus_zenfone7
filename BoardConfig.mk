@@ -34,6 +34,7 @@ BOARD_ROOT_EXTRA_FOLDERS += motor_fw1 motor_fw2
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/vendor_framework_compatibility_matrix.xml
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/asus/sm8250
 TARGET_KERNEL_CONFIG := vendor/zf7_defconfig
 
 # Properties
