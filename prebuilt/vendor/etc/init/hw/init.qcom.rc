@@ -32,6 +32,7 @@
 import /vendor/etc/init/hw/init.asus.usb.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
+import /vendor/etc/init/hw/init.qcom.power.rc
 
 #ASUS_BSP +++ frank_tao "[ZS670KS][Thermal] Thermal Service"
 import init.asus.thermald_ZS670KS.rc
