@@ -201,4 +201,7 @@
         <item>com.qti.slaservice/com.qti.slaservice.SLABootReceiver</item>
     </string-array>
 
+    <!-- Default radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">117px</dimen>
+
 </resources>
