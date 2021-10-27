@@ -16,7 +16,6 @@ system_ext/etc/perf/wlc_model.tflite
 system_ext/etc/seccomp_policy/perfservice.policy
 
 # QTI Telephony
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/DynamicDDSService/DynamicDDSService.apk
 -product/app/uimgbaservice/uimgbaservice.apk
 system_ext/etc/permissions/embms.xml
