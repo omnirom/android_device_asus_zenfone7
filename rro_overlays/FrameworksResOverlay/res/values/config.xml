@@ -199,4 +199,18 @@
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps">true</bool>
 
+    <!-- An array of arrays of side fingerprint sensor properties relative to each display.
+         Note: this value is temporary and is expected to be queried directly
+         from the HAL in the future. -->
+    <array name="config_sfps_sensor_props">
+        <item>@array/config_sfps_sensor_props_0</item>
+    </array>
+
+    <array name="config_sfps_sensor_props_0">
+        <item></item>     <!-- displayId (no id mean all display id)-->
+        <item>1080</item> <!-- sensorLocationX -->
+        <item>1050</item>  <!-- sensorLocationY -->
+        <item>105</item>  <!-- sensorRadius -->
+    </array>
+
 </resources>
