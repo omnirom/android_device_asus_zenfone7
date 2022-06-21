@@ -8,8 +8,6 @@
         <version>1.1</version>
         <interface>
             <name>IEvsEnumerator</name>
-            <instance>EvsEnumeratorHw</instance>
-            <instance>EvsEnumeratorHw-Mock</instance>
             <instance>default</instance>
         </interface>
     </hal>
@@ -100,6 +98,7 @@
         <name>com.qualcomm.qti.uceservice</name>
         <version>2.0-1</version>
         <version>2.2</version>
+        <version>2.3</version>
         <interface>
             <name>IUceService</name>
             <instance>com.qualcomm.qti.uceservice</instance>
@@ -142,6 +141,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.asus.wifi.hostapd</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAsusHostapd</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.asus.wifi.netutil</name>
         <version>1.0</version>
         <interface>
@@ -151,7 +158,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.display.color</name>
-        <version>1.0-5</version>
+        <version>1.0-7</version>
         <interface>
             <name>IDisplayColor</name>
             <instance>default</instance>
@@ -198,12 +205,11 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.nxp.hardware.nfc</name>
-        <version>1.0-1</version>
+    <hal format="hidl" optional="false">
+        <name>vendor.nxp.nxpnfc</name>
         <version>2.0</version>
         <interface>
-            <name>INqNfc</name>
+            <name>INxpNfc</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -212,6 +218,14 @@
         <version>1.0</version>
         <interface>
             <name>INxpNfcLegacy</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.pixelworks.hardware.display</name>
+        <version>1.0</version>
+        <interface>
+            <name>IIris</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -234,7 +248,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.data.factory</name>
         <version>1.0</version>
-        <version>2.0-1</version>
+        <version>2.0-4</version>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
@@ -261,10 +275,33 @@
         <version>1.0-2</version>
         <version>2.0-1</version>
         <version>3.0</version>
-        <version>4.0</version>
+        <version>4.0-1</version>
         <interface>
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.gnss</name>
+        <interface>
+            <name>ILocAidlGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.AGMIPC</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAGM</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.ListenSoundModel</name>
+        <version>1.0</version>
+        <interface>
+            <name>IListenSoundModel</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -285,7 +322,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.bluetooth_audio</name>
-        <version>2.0</version>
+        <version>2.0-1</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
@@ -314,6 +351,14 @@
         <interface>
             <name>IService</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.camera.aon</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAONService</name>
+            <instance>aoncameraservice</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -359,7 +404,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.data.iwlan</name>
-        <version>1.0</version>
+        <version>1.0-1</version>
         <interface>
             <name>IIWlan</name>
             <instance>slot1</instance>
@@ -396,8 +441,25 @@
         <name>vendor.qti.hardware.display.composer</name>
         <version>2.0-1</version>
         <version>3.0</version>
+        <version>3.1</version>
         <interface>
             <name>IQtiComposer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.display.config</name>
+        <interface>
+            <name>IDisplayConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.display.demura</name>
+        <version>1.0</version>
+        <version>2.0</version>
+        <interface>
+            <name>IDemuraFileFinder</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -409,6 +471,14 @@
         <interface>
             <name>IQtiMapper</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.dpmservice</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDpmService</name>
+            <instance>DpmService</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -429,7 +499,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.embmssl</name>
-        <version>1.0</version>
+        <version>1.0-1</version>
         <interface>
             <name>IEmbms</name>
             <instance>embmsslServer0</instance>
@@ -492,16 +562,48 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.limits</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>ILimits</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.mwqemadapter</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMwqemAdapter</name>
+            <instance>MwqemAdapter</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.pal</name>
+        <version>1.0</version>
+        <interface>
+            <name>IPAL</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.perf</name>
-        <version>2.0</version>
+        <version>2.0-3</version>
         <interface>
             <name>IPerf</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.qccsyshal</name>
+        <name>vendor.qti.hardware.power.powermodule</name>
         <version>1.0</version>
+        <interface>
+            <name>IPowerModule</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.qccsyshal</name>
+        <version>1.0-1</version>
         <interface>
             <name>IQccsyshal</name>
             <instance>qccsyshal</instance>
@@ -513,6 +615,14 @@
         <interface>
             <name>IQccvndhal</name>
             <instance>qccvndhal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.qconfig</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQConfig</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -543,6 +653,41 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
+        <interface>
+            <name>IQXRCoreService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
+        <interface>
+            <name>IQXRCamService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
+        <interface>
+            <name>IQXRSplitService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
+        <interface>
+            <name>IQXRModService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
+        <interface>
+            <name>IQXRAudioService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.am</name>
         <version>1.0</version>
@@ -552,9 +697,25 @@
             <instance>slot2</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.radio.am</name>
+        <interface>
+            <name>IQcRilAudio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1.0-6</version>
+        <version>1.0-8</version>
+        <interface>
+            <name>IImsRadio</name>
+            <instance>imsradio0</instance>
+            <instance>imsradio1</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.radio.ims</name>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -571,7 +732,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.lpa</name>
-        <version>1.0</version>
+        <version>1.0-1</version>
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
@@ -590,9 +751,17 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <version>1.0</version>
-        <version>2.0-4</version>
+        <version>2.0-6</version>
         <interface>
             <name>IQtiRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+        <interface>
+            <name>IQtiRadioStable</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
@@ -693,6 +862,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.sxrhal</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISxrCrypto</name>
+            <instance>sxrhalservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.systemhelper</name>
         <version>1.0</version>
         <interface>
@@ -706,7 +883,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.trustedui</name>
-        <version>1.0</version>
+        <version>1.0-2</version>
         <interface>
             <name>ITrustedInput</name>
             <instance>default</instance>
@@ -737,7 +914,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.wifi.hostapd</name>
-        <version>1.0-2</version>
+        <version>1.0-3</version>
         <interface>
             <name>IHostapdVendor</name>
             <instance>default</instance>
@@ -746,10 +923,18 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.wifi.supplicant</name>
-        <version>2.0</version>
+        <version>2.0-3</version>
         <interface>
             <name>ISupplicantVendor</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.wifi.wificfr</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWificfr</name>
+            <instance>wificfr</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -758,6 +943,14 @@
         <interface>
             <name>IWifiStats</name>
             <instance>wifiStats</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.wifi.wifimyftm</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWifiMyFtm</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -815,6 +1008,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.ims.factory</name>
         <version>1.0-1</version>
+        <version>2.0</version>
         <interface>
             <name>IImsFactory</name>
             <instance>default</instance>
@@ -830,10 +1024,26 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.memory.pasrmanager</name>
-        <version>1.0</version>
+        <version>1.0-1</version>
         <interface>
             <name>IPasrManager</name>
             <instance>pasrhal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.mstatservice</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMStatService</name>
+            <instance>mstatservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.qesdhal</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IQesdhal</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -841,6 +1051,14 @@
         <version>1.0</version>
         <interface>
             <name>IQspmhal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.sla.service</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISlaService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -854,7 +1072,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.spu</name>
-        <version>1.0</version>
+        <version>1.0-1</version>
         <interface>
             <name>ISPUManager</name>
             <instance>default</instance>
@@ -868,15 +1086,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <sepolicy>
-        <kernel-sepolicy-version>30</kernel-sepolicy-version>
-        <sepolicy-version>26.0</sepolicy-version>
-        <sepolicy-version>27.0</sepolicy-version>
-        <sepolicy-version>28.0</sepolicy-version>
-        <sepolicy-version>29.0</sepolicy-version>
-        <sepolicy-version>30.0</sepolicy-version>
-    </sepolicy>
-    <avb>
-        <vbmeta-version>1.0</vbmeta-version>
-    </avb>
 </compatibility-matrix>
