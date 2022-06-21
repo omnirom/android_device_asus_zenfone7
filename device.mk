@@ -27,6 +27,11 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    FrameworksResDeviceOverlay \
+    FrameworksResVendorOverlay \
+    SystemUIDeviceOverlay
+
 # Api
 PRODUCT_SHIPPING_API_LEVEL := 29
 
@@ -39,10 +44,6 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     CameraTile
-
-# Frameworks
-PRODUCT_PACKAGES += \
-    FrameworksResOverlay
 
 # Input
 PRODUCT_COPY_FILES += \
