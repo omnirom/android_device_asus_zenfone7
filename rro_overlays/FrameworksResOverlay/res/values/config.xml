@@ -200,5 +200,4 @@
         <item>com.qti.slaservice/com.qti.slaservice.SLAService</item>
         <item>com.qti.slaservice/com.qti.slaservice.SLABootReceiver</item>
     </string-array>
-
 </resources>
