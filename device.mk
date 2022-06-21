@@ -21,6 +21,7 @@
 #
 
 # VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
 PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Overlays
@@ -31,6 +32,12 @@ PRODUCT_PACKAGES += \
     FrameworksResDeviceOverlay \
     FrameworksResVendorOverlay \
     SystemUIDeviceOverlay
+
+ifeq ($(ROM_BUILDTYPE),$(filter $(ROM_BUILDTYPE),GAPPS))
+# Android Auto
+PRODUCT_PACKAGES += \
+    AndroidAutoStub
+endif
 
 # Api
 PRODUCT_SHIPPING_API_LEVEL := 29
