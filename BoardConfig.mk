@@ -41,7 +41,7 @@ TARGET_KERNEL_CONFIG := vendor/zf7_defconfig
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # inherit from the proprietary version
 -include vendor/asus/zenfone7/BoardConfigVendor.mk
