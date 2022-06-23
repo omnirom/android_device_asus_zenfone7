@@ -31,6 +31,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     FrameworksResDeviceOverlay \
     FrameworksResVendorOverlay \
+    SettingsDeviceOverlay \
     SystemUIDeviceOverlay
 
 ifeq ($(ROM_BUILDTYPE),$(filter $(ROM_BUILDTYPE),GAPPS))
