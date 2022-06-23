@@ -28,7 +28,9 @@ lib64/libxditk_arch.so
 lib64/libxditk_ditArchLIB.so
 lib64/libxditk_ditBSP.so
 lib64/libxditk_ditBSP_JNI.so
--priv-app/AsusCameraApp/AsusCameraApp.apk
+
+# Moved to vendor/images/asus/zenfone7 (exceeds GitHub's file size limit of 100.00 MB)
+#-priv-app/AsusCameraApp/AsusCameraApp.apk
 priv-app/AsusCameraApp/lib/arm64/libarcsoft_object_tracking.so
 priv-app/AsusCameraApp/lib/arm64/libarcsoft_panorama_burstcapture.so
 priv-app/AsusCameraApp/lib/arm64/libarcsoft_panorama_interval_capture.so
