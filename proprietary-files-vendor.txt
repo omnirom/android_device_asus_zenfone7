@@ -1164,7 +1164,6 @@ vendor/lib/hal_libnfc.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.boot@1.0-impl-1.1-qti.so
 vendor/lib/hw/android.hardware.gnss@2.1-impl-qti.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/audio.primary.kona.so
 vendor/lib/hw/audio.r_submix.default.so
 vendor/lib/hw/audio.usb.default.so
@@ -1758,7 +1757,6 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.boot@1.0-impl-1.1-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/audio.primary.kona.so
 vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.usb.default.so
