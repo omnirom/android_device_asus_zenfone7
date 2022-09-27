@@ -83,4 +83,3 @@ $(call inherit-product, device/asus/sm8250-common/common.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/asus/zenfone7/zenfone7-vendor.mk)
-$(call inherit-product, vendor/images/asus/zenfone7/app/zf7-app.mk)
