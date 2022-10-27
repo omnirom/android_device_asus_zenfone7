@@ -328,6 +328,9 @@ VENDOR_SKIP_FILES_COMMON=(
     "build_ru_1.prop"
     "default.prop"
 
+    # Camera
+    "lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so"
+
     # config.fs
     "etc/fs_config_dirs"
     "etc/fs_config_files"
