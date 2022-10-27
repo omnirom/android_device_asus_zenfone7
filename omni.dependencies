@@ -10,5 +10,11 @@
     "repository": "android_kernel_asus_sm8250",
     "target_path": "kernel/asus/sm8250",
     "revision": "android-13.0"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "android_vendor_qcom_opensource_vibrator",
+    "target_path": "vendor/qcom/opensource/vibrator",
+    "revision": "android-13.0"
   }
 ]

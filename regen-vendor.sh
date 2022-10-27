@@ -614,6 +614,12 @@ VENDOR_SKIP_FILES_COMMON=(
     "factory"
     "odm"
 
+    # Vibrator
+    "etc/init/vendor.qti.hardware.vibrator.service.rc"
+    "etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml"
+    "bin/hw/vendor.qti.hardware.vibrator.service"
+    "lib64/vendor.qti.hardware.vibrator.impl.so"
+
     # Wifi
     "bin/wifilearner"
     "bin/hw/android.hardware.wifi@1.0-service"

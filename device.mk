@@ -75,6 +75,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+
 # Inherit from asus sm8250-common
 $(call inherit-product, device/asus/sm8250-common/common.mk)
 
