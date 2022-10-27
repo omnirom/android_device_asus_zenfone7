@@ -149,14 +149,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.asus.wifi.netutil</name>
-        <version>1.0</version>
-        <interface>
-            <name>IWifiNetUtil</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.display.color</name>
         <version>1.0-7</version>
         <interface>
@@ -186,22 +178,6 @@
         <version>2.1</version>
         <interface>
             <name>IGoodixFingerprintDaemon</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.ims.glovemode</name>
-        <version>1.0</version>
-        <interface>
-            <name>IGloveMode</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.ims.zenmotion</name>
-        <version>1.0</version>
-        <interface>
-            <name>IZenMotion</name>
             <instance>default</instance>
         </interface>
     </hal>

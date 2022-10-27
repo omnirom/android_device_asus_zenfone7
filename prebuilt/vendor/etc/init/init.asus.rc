@@ -1,0 +1,534 @@
+#################################################################
+#								#
+#   	              ASUS USER RC				#
+#								#
+#################################################################
+
+#################################
+#
+#   	booting on trigger
+#
+# ****DO NOT insert any services***     
+#
+#################################
+import init.asus.twinapps.rc
+
+on fs
+    wait /dev/block/bootdevice/by-name/batinfo
+    exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/batinfo
+    mount ext4 /dev/block/bootdevice/by-name/batinfo /batinfo nosuid nodev noatime barrier=1
+
+    wait /dev/block/bootdevice/by-name/motor_fw1
+    exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/motor_fw1
+    mount ext4 /dev/block/bootdevice/by-name/motor_fw1 /motor_fw1 nosuid nodev noatime barrier=1
+
+    chmod 0775 /motor_fw1
+    restorecon_recursive /motor_fw1
+
+    wait /dev/block/bootdevice/by-name/motor_fw2
+    exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/motor_fw2
+    mount ext4 /dev/block/bootdevice/by-name/motor_fw2 /motor_fw2 nosuid nodev noatime barrier=1
+
+    chmod 0775 /motor_fw2
+    restorecon_recursive /motor_fw2
+
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/status
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/state
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Y
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Z
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X1_threshold
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X2_threshold
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Y1_threshold
+    chown root system /sys/devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/trigger_update
+#add on boot / on fs ,etc.
+
+on boot
+   insmod /vendor/lib/modules/texfat.ko
+   insmod /vendor/lib/modules/tntfs.ko
+
+# BT A2DP offload mode property
+setprop persist.bluetooth.a2dp_offload.disabled false
+
+on post-fs-data
+    # add for tfa calibrate
+    mkdir /data/vendor/misc/amp 0777 audio audio
+    write /data/vendor/misc/amp/tfa98xx-sysfs.lck 0
+    start asus_record
+
+# ZEN7 MOTOR +++
+    chmod 0777 /proc/driver/motor_wq_run
+    #chown audio audio /proc/driver/motor_wq_run
+    write /proc/driver/motor_wq_run 1
+# ZEN7 MOTOR ---
+
+# ASUS BSP COS mode +++
+    chmod 0666 /sys/class/leds/red/brightness
+    chmod 0666 /sys/class/leds/green/brightness
+    chmod 0666 /sys/class/leds/blue/brightness
+# ASUS BSP COS mode ---
+
+#ASUS_BSP 2nd G+G +++
+    chown system camera /dev/asus2ndAccelSensor
+    chmod 0660 /dev/asus2ndAccelSensor
+    chown system camera /dev/asus2ndGyroSensor
+    chmod 0660 /dev/asus2ndGyroSensor
+    chown system camera /sys/class/icm206xx/gyro2_poll_delay
+    chmod 0664 /sys/class/icm206xx/gyro2_poll_delay
+    chown system camera /sys/class/icm206xx/accel2_poll_delay
+    chmod 0664 /sys/class/icm206xx/accel2_poll_delay
+#ASUS_BSP 2nd G+G ---
+
+    chown shell root /batinfo
+    chmod 0775 /batinfo
+    restorecon_recursive /batinfo
+
+    chmod 0666 /sys/class/drm/hdr_mode
+
+#fingerprint;asus_bsp++;
+    chmod 0644 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+#fingerprint;asus_bsp--;
+
+#ABSP++++ MotorHAL porting
+    chmod 0777 /dev/asusMotoDrv
+#ABSP++
+
+#Asus BSP++++ latch sensor
+    start update_threshold
+#Asus BSP----
+
+# ASUS_SZ_BSP Yadong: Touch +++
+    chmod 0666 /sys/bus/i2c/devices/i2c-4/4-0038/game_mode
+    chmod 0666 /sys/bus/i2c/devices/i2c-4/4-0038/rotation_type
+    chmod 0666 /sys/bus/i2c/devices/i2c-4/4-0038/touch_report_rate
+# ASUS_SZ_BSP Yadong: Touch ---
+
+#####################################################
+#####################################################
+#####################################################
+
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+#        FTM Mode property trigger (start)
+#          ( trigger on ro.boot.ftm=1 )
+#
+#       ****DO NOT insert any services***     
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+
+#add on ro.boot.ftm=* here
+
+###-----------------------------------------------###
+#         FTM Mode property trigger (end)
+#          ( trigger on ro.boot.ftm=1 )
+#
+#       ****DO NOT insert any services***     
+###-----------------------------------------------###
+
+#####################################################
+#####################################################
+#####################################################
+
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+#               ALL ASUS service (start)
+#
+#         ****DO NOT insert any on property***
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+
+#add service here
+
+#ASUS_BSP 2nd G+G +++
+service rstg2k /vendor/bin/sh /vendor/etc/rstg2k.sh
+    user system
+    group system
+    seclabel u:r:asus_sensors:s0
+    oneshot
+    disabled
+
+service rstgy2k /vendor/bin/sh /vendor/etc/rstgy2k.sh
+    user system
+    group system
+    seclabel u:r:asus_sensors:s0
+    oneshot
+    disabled
+#ASUS_BSP 2nd G+G ---
+
+#ASUS_BSP add widevine_daemon service+++
+service vendor.ins_key /vendor/bin/install_key_server
+    class late_start
+    user root
+    group root
+    seclabel u:r:install_key_server:s0
+    disabled
+
+service vendor.ins_WDKey /vendor/bin/sh /vendor/bin/ReInsWDKey
+    class core
+    user root
+    group root
+    seclabel u:r:savelogmtp:s0
+    disabled
+    oneshot
+
+service vendor.widevine /vendor/bin/sh /vendor/bin/widevine.sh
+    class late_start
+    user root
+    group root
+    seclabel u:r:savelogmtp:s0
+    disabled
+    oneshot
+#ASUS_BSP add widevine_daemon service---
+
+on property:persist.vendor.asus.wifi.verboselogging=*
+    stop wifi_logtool
+    start wifi_logtool
+
+service wifi_logtool /system/bin/wifi_logtool
+    class core
+    user root
+    group root
+    disabled
+    seclabel u:r:wifi_logtool:s0
+    oneshot
+
+#ASUS_BSP_WIFI
+service WiFiFWTool /vendor/bin/sh /vendor/bin/WiFiFWTool.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+
+service wifimacsh /vendor/bin/sh /vendor/bin/WifiMac.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+#ASUS_BSP_WIFI
+
+#ASUS_BSP_WIFI +++ SAR Reduce wifi power
+service SARPower-sh /vendor/bin/sh /vendor/bin/WifiSARPower.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+#ASUS_BSP_WIFI +++ SAR Reduce wifi power
+
+#ASUS_BSP +++ BT WIFI MAC, BT WIFI firmware version
+service qcfwver /vendor/bin/qcfwver
+    seclabel u:r:asus_bluetooth:s0
+    class main
+    user root
+    group root
+    oneshot
+    disabled
+#ASUS_BSP --- BT WIFI MAC, BT WIFI firmware version
+
+# ASUS_SZ_BSP Yadong: Touch +++
+service touch_ver /vendor/bin/sh  /vendor/bin/touch_ver.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+
+service game_mode /vendor/bin/sh  /vendor/bin/init.asus.gamemode.sh
+    class core
+    user system
+    group system
+    seclabel u:r:asus_touch:s0
+    oneshot
+    disabled
+# ASUS_SZ_BSP Yadong: Touch ---
+
+#Zen7 motor +++
+service motor /vendor/bin/sh  /vendor/bin/motor.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+#Zen7 motor ---
+
+#Zen7 latch sensor +++
+service update_threshold /vendor/bin/sh  /vendor/bin/update_threshold.sh
+     user system
+     group system
+     seclabel u:r:latch_sensor:s0
+     oneshot
+     disabled
+#Zen7 latch sensor ---
+
+# ASUS_BSP RIL +++
+service RFantennaSwitchSvc /vendor/bin/sh /vendor/bin/antennaSwitchSvc.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+# ASUS_BSP RIL ---
+
+###-----------------------------------------------###
+#                ALL ASUS service (end)
+# 
+#         ***DO NOT insert any on property***   
+###-----------------------------------------------###
+
+#####################################################
+#####################################################
+#####################################################
+
+
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+#               ALL ASUS on property  (start)
+# 
+#           ****DO NOT insert service***     
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+
+#add on property here
+
+#Asus BSP+++ charging
+on property:sys.boot_completed=1
+    setprop persist.sys.stopcharging 0
+    setprop persist.sys.charginglimit 0
+#Asus BSP---
+
+on property:persist.sys.enableAPD=1
+	write /sys/class/power_supply/battery/device/demo_app_status 1
+on property:persist.sys.enableAPD=0
+	write /sys/class/power_supply/battery/device/demo_app_status 0
+
+#ASUS_BSP 2nd G+G +++
+on property:vendor.asus.rstg2k=*
+    start rstg2k
+on property:vendor.asus.rstgy2k=*
+    start rstgy2k
+#ASUS_BSP 2nd G+G ---
+
+#ASUS_BSP: add for key validation +++
+on property:vendor.atd.start.key.install=1
+    start vendor.ins_key
+
+on property:vendor.debug.check.keybox=1
+    start vendor.widevine
+
+on property:vendor.drm.keystatus=-1 && property:vendor.asus.install-key=""
+    chmod 0644 /ADF/NOWDKY
+    chmod 0644 /ADF/WDKEY
+    setprop vendor.asus.install-key 1
+    start vendor.ins_WDKey
+#ASUS_BSP: add for key validation ---
+
+on property:persist.vendor.asus.wlanfwdbg=*
+    start WiFiFWTool
+
+on property:sys.boot_completed=1
+    start wifimacsh
+
+#ASUS_BSP_WIFI +++ SAR Reduce wifi power
+on property:vendor.asus.operator.iso-country=*
+    restart SARPower-sh
+
+on property:wlan.driver.status=*
+    restart SARPower-sh
+
+on property:vendor.wlan.dbs=*
+    restart SARPower-sh
+
+on property:vendor.wlan.softap.driver.status=*
+    restart SARPower-sh
+
+on property:vendor.sla.enabled=*
+    restart SARPower-sh
+
+#ASUS_BSP_WIFI --- SAR Reduce wifi power
+
+# ASUS_BSP+++ for wlan miracast log
+on property:persist.vendor.asus.miracastlog=1
+    setprop debug.wfd.uibcevents 1
+    write /data/vendor/mmosal_logmask.cfg "LOGMASK = 6013:63"
+
+on property:persist.vendor.asus.miracastlog=0
+    setprop debug.wfd.uibcevents 0
+    rm /data/vendor/mmosal_logmask.cfg
+# ASUS_BSP--- for wlan miracast log
+
+# ASUS BSP Add for charger boot_complete +++
+on property:sys.boot_completed=1
+	write /sys/class/power_supply/battery/device/boot_completed 1
+# ASUS BSP Add for charger boot_complete ---
+
+on property:persist.sys.ultrabatterylife=1
+    write /sys/class/power_supply/battery/device/ultra_bat_life 1
+    write /asdf/CHGLimit 0
+
+on property:persist.sys.ultrabatterylife=0
+    write /sys/class/power_supply/battery/device/ultra_bat_life 0
+
+on property:persist.sys.stopcharging=1
+    write /sys/class/power_supply/battery/device/smartchg_stop_charging 1
+
+on property:persist.sys.stopcharging=0
+    write /sys/class/power_supply/battery/device/smartchg_stop_charging 0
+
+on property:persist.sys.charginglimit=*
+    write /sys/class/power_supply/battery/device/smartchg_slow_charging ${persist.sys.charginglimit}
+
+# ASUS_BSP +++ BT WIFI MAC, BT WIFI firmware version
+on property:sys.boot_completed=1
+    start qcfwver
+# ASUS_BSP ---BT WIFI MAC, BT WIFI firmware version
+
+# ASUS_SZ_BSP Yadong: Touch +++
+on property:sys.boot_completed=1
+   start touch_ver
+
+on property:vendor.asus.gamingtype=*
+   start game_mode
+on property:vendor.screen.rotation=0
+   write /sys/bus/i2c/devices/i2c-4/4-0038/rotation_type 0
+on property:vendor.screen.rotation=90
+   write /sys/bus/i2c/devices/i2c-4/4-0038/rotation_type 1
+on property:vendor.screen.rotation=270
+   write /sys/bus/i2c/devices/i2c-4/4-0038/rotation_type 2
+
+on property:vendor.asus.touch_control_aod=0
+   write /sys/bus/i2c/devices/i2c-4/4-0038/fts_aod_ctrl_mode 0
+on property:vendor.asus.touch_control_aod=1
+   write /sys/bus/i2c/devices/i2c-4/4-0038/fts_aod_ctrl_mode 1
+# ASUS_SZ_BSP Yadong: Touch ---
+
+#ABSP++++ for asusrecord service
+# for asusrecord service
+on property:persist.vendor.asus.motorservice.fallingTrigger=1
+    start asus_record
+
+# for asusrecord service (rotation)
+on property:persist.vendor.asus.motorservice.rotationTrigger=1
+    start asus_record
+
+# for asusrecord service (rotation)
+on property:persist.vendor.asus.motorservice.dumprecord=1
+    start asus_record
+
+on property:debug.update.asusrecord=1
+    start asus_record
+
+service asus_record /system/bin/asusrecord
+    user root
+    group root
+    disabled
+    oneshot
+#ABSP++
+
+# ASUS_BSP Bryant +++ "Move camera DIT cali file"
+on property:sys.boot_completed=1
+	chmod 0777 /data/vendor/camera/
+	chmod 644 /vendor/factory/dualcam_cali.bin
+	chmod 644 /vendor/factory/dualcam_cali_1x.bin
+	chmod 644 /vendor/factory/dualcam_cali_3x.bin
+	copy /vendor/factory/dualcam_cali.bin /data/vendor/camera/dualcam_cali_1x.bin
+	copy /vendor/factory/dualcam_cali_1x.bin /data/vendor/camera/dualcam_cali_1x.bin
+	copy /vendor/factory/dualcam_cali_3x.bin /data/vendor/camera/dualcam_cali_3x.bin
+	chmod 0755 /data/vendor/camera/dualcam_cali_1x.bin
+	chmod 0755 /data/vendor/camera/dualcam_cali_3x.bin
+
+	copy /proc/driver/dualcam_cali /data/vendor/camera/dualcam_cali_1x
+	copy /proc/driver/dualcam_cali_1x /data/vendor/camera/dualcam_cali_1x
+	copy /proc/driver/dualcam_cali_3x /data/vendor/camera/dualcam_cali_3x
+	chmod 0755 /data/vendor/camera/dualcam_cali_1x
+	chmod 0755 /data/vendor/camera/dualcam_cali_3x
+# ASUS_BSP Bryant --- "Move camera DIT cali file"
+
+#Add for ASUS MCU Uart Log +++
+on property:persist.vendor.asus.mcu_log=1
+    start asusmcuuartlog
+
+on property:persist.vendor.asus.mcu_log=0
+    stop asusmcuuartlog
+
+service asusmcuuartlog /vendor/bin/asusmcuuartlog
+    user root
+    group root
+    disabled
+    oneshot
+#Add for ASUS MCU Uart Log ---
+
+#Zen7 motor +++
+on property:persist.vendor.asus.motor=*
+   start motor
+#Zen7 motor ---
+
+# ASUS_BSP RIL +++
+on property:persist.vendor.radio.airplane_mode_on=*
+    start RFantennaSwitchSvc
+# ASUS_BSP RIL ---
+
+on property:vendor.drm.keystatus=1
+    setprop vendor.debug.drm.keystatus 1
+on property:vendor.drm.keystatus=-1
+    setprop vendor.debug.drm.keystatus -1
+
+###-----------------------------------------------###
+#              ALL ASUS on property (end)
+# 
+#            ****DO NOT insert service***     
+###-----------------------------------------------###
+
+#ASUS_BSP LiJen for QTR +++
+on boot_QTR
+    # Permissions for System Server and daemons.
+    chown radio system /sys/android_power/state
+    chown radio system /sys/android_power/request_state
+    chown radio system /sys/android_power/acquire_full_wake_lock
+    chown radio system /sys/android_power/acquire_partial_wake_lock
+    chown radio system /sys/android_power/release_wake_lock
+    chown system system /sys/power/autosleep
+    chown radio wakelock /sys/power/wake_lock
+    chown radio wakelock /sys/power/wake_unlock
+    chmod 0660 /sys/power/wake_lock
+    chmod 0660 /sys/power/wake_unlock
+    chown root radio /proc/cmdline
+
+    # Start standard binderized HAL daemons
+    #class_start hal
+    class_start core
+
+on charger_QTR
+    #trigger late-init
+
+    trigger early-fs
+    trigger factory-fs
+    trigger fs
+    trigger post-fs
+    trigger late-fs
+    trigger post-fs-data
+    
+    #trigger load_persist_props_action
+    #trigger zygote-start
+    #trigger firmware_mounts_complete
+
+    #trigger early-boot
+    #trigger boot
+    trigger boot_QTR
+    #trigger mmi
+
+    class_stop main
+#ASUS_BSP LiJen for QTR ---
+
+#NFC
+on post-fs-data
+    mkdir /data/vendor 0777 nfc nfc
+    mkdir /data/vendor/nfc 0777 nfc nfc
+    mkdir /data/vendor/nfc/param 0777 nfc nfc
+    chmod 0660 /dev/pn553
+    chown nfc nfc /dev/pn553
+
+on charger
+    trigger charger_QTR
+# ASUS BSP COS mode +++
+    chmod 0666 /sys/class/leds/red/brightness
+    chmod 0666 /sys/class/leds/green/brightness
+    chmod 0666 /sys/class/leds/blue/brightness
+    chmod 0666 /proc/cmdline
+# ASUS BSP COS mode ---

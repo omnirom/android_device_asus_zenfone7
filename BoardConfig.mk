@@ -31,8 +31,10 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_ROOT_EXTRA_FOLDERS += motor_fw1 motor_fw2
 
 #HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/manifest/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/manifest/framework_manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest/manifest.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/manifest/compatibility_matrix.xml
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/asus/sm8250
@@ -40,9 +42,13 @@ TARGET_KERNEL_CONFIG := vendor/zf7_defconfig
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2022-07-05
 
 # Sepolicy
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # inherit from the proprietary version
 -include vendor/asus/zenfone7/BoardConfigVendor.mk

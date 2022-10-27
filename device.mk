@@ -20,10 +20,6 @@
 # product configuration (apps).
 #
 
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
-PRODUCT_TARGET_VNDK_VERSION := 30
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -45,9 +41,9 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 # audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS670KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS670KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_volumes_ZS670KS.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_volumes_ZS670KS.xml
+    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS670KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_policy_configuration_ZS670KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_policy_volumes_ZS670KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes_ZS670KS.xml
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -65,7 +61,8 @@ PRODUCT_COPY_FILES += \
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/zenfone7/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/asus/zenfone7/prebuilt/root,recovery/root)
+    $(call find-copy-subdir-files,*,device/asus/zenfone7/prebuilt/root,recovery/root) \
+    $(call find-copy-subdir-files,*,device/asus/zenfone7/prebuilt/vendor,vendor)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
