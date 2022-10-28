@@ -1,0 +1,2 @@
+get_prop(hal_sensors_default, asus_sensors_prop)
+set_prop(hal_sensors_default, asus_sensors_prop)

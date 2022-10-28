@@ -1,3 +1,14 @@
+# Asus Sp
+/(vendor|system/vendor)/bin/adrt_service                                            u:object_r:asus_sp_exec:s0
+/(vendor|system/vendor)/bin/change_aps                                              u:object_r:asus_sp_exec:s0
+
+# Display
+/(vendor|system/vendor)/bin/irisConfig                                              u:object_r:iris_config_exec:s0
+
 # Files in rootfs
-/motor_fw1(/.*)?		u:object_r:log_file:s0
-/motor_fw2(/.*)?		u:object_r:log_file:s0
+/motor_fw1(/.*)?                                                                    u:object_r:log_file:s0
+/motor_fw2(/.*)?                                                                    u:object_r:log_file:s0
+
+# Touch
+/(vendor|system/vendor)/bin/init.asus.gamemode.sh                                   u:object_r:asus_touch_exec:s0
+/(vendor|system/vendor)/bin/touch_ver.sh                                            u:object_r:asus_touch_exec:s0

@@ -1,0 +1,7 @@
+get_prop(hal_camera_default, asus_sensors_prop)
+
+# Allow camera to read/write to proc files into bin/Camera_OIS-* and bin/q_af_cali
+allow hal_camera_default proc:file rw_file_perms;
+
+# Camera for ParameterDB.db
+allow hal_camera_default system_lib_file:file { getattr lock open read };

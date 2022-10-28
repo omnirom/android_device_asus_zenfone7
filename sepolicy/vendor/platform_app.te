@@ -1,0 +1,12 @@
+# Camera for ParameterDB.db
+allow platform_app system_lib_file:file { getattr lock open read };
+
+# Hall Sensor
+allow platform_app asus_halls_sysfs:file rw_file_perms;
+
+# Pixelworks
+allow platform_app asus_display_proc_exec:file rw_file_perms;
+hal_client_domain(platform_app, hal_display_iris)
+
+# Motor
+allow platform_app vendor_motor_camera:file rw_file_perms;

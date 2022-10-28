@@ -1,0 +1,6 @@
+allow asus_sp property_socket:sock_file write;
+allow asus_sp block_device:dir search;
+allow asus_sp proc:file r_file_perms;
+
+get_prop(asus_sp, asus_sp_system_prop)
+set_prop(asus_sp, asus_sp_system_prop)

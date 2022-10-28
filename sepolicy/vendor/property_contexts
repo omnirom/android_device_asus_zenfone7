@@ -1,0 +1,33 @@
+# Audio
+vendor.asus.audiocalibration                                      u:object_r:exported_system_prop:s0
+vendor.audio.calibration.rcv                                      u:object_r:exported_system_prop:s0
+vendor.audio.calibration.spk                                      u:object_r:exported_system_prop:s0
+vendor.audio.calibration.value.range                              u:object_r:exported_system_prop:s0
+vendor.audio.calibration.rcv.value                                u:object_r:exported_system_prop:s0
+vendor.audio.calibration.spk.value                                u:object_r:exported_system_prop:s0
+vendor.use.audio.eu.parameters                                    u:object_r:exported_system_prop:s0
+
+# Camera
+vendor.sys.asus.camprobe                                          u:object_r:vendor_asus_prop:s0
+
+# Fingerprint
+vendor.gf.debug.dump_bigdata_data                                 u:object_r:vendor_gx_fpd_prop:s0
+
+# Ims
+ro.vendor.tc.qkey                                                 u:object_r:asus_sp_system_prop:s0
+
+# Sensors
+vendor.asus.rstg2k                                                u:object_r:debug_prop:s0
+vendor.asus.rstgy2k                                               u:object_r:debug_prop:s0
+vendor.asus.rstg2k.result                                         u:object_r:asus_sensors_prop:s0
+vendor.asus.rstgy2k.result                                        u:object_r:asus_sensors_prop:s0
+persist.vendor.asus.gyrosensor2calibx                             u:object_r:asus_sensors_prop:s0
+persist.vendor.asus.gyrosensor2caliby                             u:object_r:asus_sensors_prop:s0
+persist.vendor.asus.gyrosensor2calibz                             u:object_r:asus_sensors_prop:s0
+persist.vendor.asus.gyrosensor2calibtime                          u:object_r:asus_sensors_prop:s0
+
+# Termal
+persist.vendor.asus.foregroundapp                                 u:object_r:exported_system_prop:s0
+vendor.proximity.                                                 u:object_r:vendor_thermal_prop:s0
+vendor.asus.foregroundapp                                         u:object_r:vendor_asus_prop:s0
+vendor.sys.enableDevPerfTHM                                       u:object_r:vendor_asus_prop:s0

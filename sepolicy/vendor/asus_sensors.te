@@ -1,0 +1,5 @@
+allow asus_sensors property_socket:sock_file write;
+allow asus_sensors vendor_shell_exec:file entrypoint;
+
+get_prop(asus_sensors, asus_sensors_prop)
+set_prop(asus_sensors, asus_sensors_prop)

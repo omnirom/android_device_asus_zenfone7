@@ -1,0 +1,2 @@
+allow vendor_hal_perf_default sysfs_thermal:file rw_file_perms;
+get_prop(vendor_hal_perf_default, vendor_asus_prop)

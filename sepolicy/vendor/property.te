@@ -1,0 +1,5 @@
+# Ims
+type asus_sp_system_prop, property_type;
+
+# Sensor
+type asus_sensors_prop, property_type;

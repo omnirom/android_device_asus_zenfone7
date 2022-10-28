@@ -1,0 +1,5 @@
+# Asus Display
+type asus_display_proc_exec, fs_type, proc_type;
+
+# Hal Sensor
+type asus_halls_sysfs, fs_type, sysfs_type;

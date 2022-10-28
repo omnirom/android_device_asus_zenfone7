@@ -1,0 +1,2 @@
+# Pixelworks display
+type hal_display_iris_hwservice, hwservice_manager_type;

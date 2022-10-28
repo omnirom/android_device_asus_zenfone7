@@ -1,0 +1,21 @@
+type iris_config, domain, halclientdomain;
+type iris_config_exec, exec_type, vendor_file_type, file_type;
+hal_client_domain(iris_config, hal_display_iris)
+
+
+# Started by init
+init_daemon_domain(iris_config)
+
+dontaudit shell iris_config:process noatsecure;
+
+allow iris_config hal_display_iris_hwservice:hwservice_manager find;
+allow shell iris_config_exec:file {read getattr map execute open };
+allow shell iris_config:process transition;
+allow iris_config iris_config_exec:file { read getattr map execute open entrypoint };
+allow iris_config shell:process sigchld;
+allow shell iris_config:process { siginh rlimitinh };
+allow iris_config adbd:process sigchld;
+allow iris_config shell:fd use;
+allow iris_config adbd:fd use;
+allow iris_config devpts:chr_file { ioctl read write getattr };
+allow iris_config adbd:unix_stream_socket { read write getattr };

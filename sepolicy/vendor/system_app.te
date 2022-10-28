@@ -1,0 +1,9 @@
+# Hall Sensor
+allow system_app asus_halls_sysfs:file rw_file_perms;
+
+# Pixelworks
+allow system_app asus_display_proc_exec:file rw_file_perms;
+hal_client_domain(system_app, hal_display_iris)
+
+# Motor
+allow system_app vendor_motor_camera:file rw_file_perms;
