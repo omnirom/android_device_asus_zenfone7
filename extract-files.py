@@ -59,6 +59,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
     'vendor/bin/hw/android.hardware.power-service': blob_fixup()
         .replace_needed('android.hardware.power-V1-ndk_platform.so', 'android.hardware.power-V1-ndk.so'),
+    'vendor/etc/msm_irqbalance.conf': blob_fixup()
+        .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
     'vendor/etc/seccomp_policy/qspm.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
     'vendor/bin/hw/android.hardware.camera.provider@2.4-service_64': blob_fixup()
