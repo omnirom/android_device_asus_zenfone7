@@ -58,6 +58,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/goodixfp.kl:system/usr/keylayout/goodixfp.kl \
     $(LOCAL_PATH)/keylayout/i-rocks_Bluetooth_Keyboard.kl:system/usr/keylayout/i-rocks_Bluetooth_Keyboard.kl
 
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.3 \
+    vendor.qti.hardware.perf@2.3.vendor
+
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/zenfone7/prebuilt/system,system) \
