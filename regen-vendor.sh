@@ -571,6 +571,12 @@ VENDOR_SKIP_FILES_COMMON=(
     "lib64/vendor.ims.airtrigger@1.0.so"
     "lib64/vendor.ims.airtrigger@1.1.so"
     "lib64/vendor.ims.airtrigger@1.2.so"
+    "lib/vendor.qti.hardware.perf@2.0.so"
+    "lib/vendor.qti.hardware.perf@2.1.so"
+    "lib/vendor.qti.hardware.perf@2.2.so"
+    "lib64/vendor.qti.hardware.perf@2.0.so"
+    "lib64/vendor.qti.hardware.perf@2.1.so"
+    "lib64/vendor.qti.hardware.perf@2.2.so"
 
     # Overlays
     "overlay/FrameworksResTarget.apk"
