@@ -57,6 +57,7 @@ VENDOR_SKIP_FILES_COMMON=(
     "etc/boot_sound/boot_sound_6.wav"
     "etc/boot_sound/boot_sound_7.wav"
     "etc/audio/audio_policy_configuration.xml"
+    "etc/audio/audio_policy_configuration_ZS670KS.xml"
     "etc/audio_effects.xml"
     "etc/audio_io_policy.conf"
     "etc/audio_policy_configuration.xml"
