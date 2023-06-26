@@ -25,4 +25,5 @@
 #define MAX_ACL_CONNECTIONS   16
 #define BLE_VND_INCLUDED   TRUE
 #define AVDT_NUM_SEPS 35
+#define GATT_MAX_PHY_CHANNEL  10
 #endif
