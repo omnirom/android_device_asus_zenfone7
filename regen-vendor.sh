@@ -59,6 +59,7 @@ VENDOR_SKIP_FILES_COMMON=(
     "etc/audio/audio_policy_configuration.xml"
     "etc/audio/audio_policy_configuration_ZS670KS.xml"
     "etc/audio_effects.xml"
+    "etc/audio_effects_ZS670KS.xml"
     "etc/audio_io_policy.conf"
     "etc/audio_policy_configuration.xml"
     "etc/audio_policy_configuration_ZS670KS.xml"

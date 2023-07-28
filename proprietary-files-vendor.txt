@@ -319,7 +319,6 @@ vendor/etc/apdr.conf
 vendor/etc/audio_configs.xml
 vendor/etc/audio_configs_stock.xml
 vendor/etc/audio_effects.conf
-vendor/etc/audio_effects_ZS670KS.xml
 vendor/etc/audio_io_policy_ZS670KS.conf
 vendor/etc/audio_platform_info.xml
 vendor/etc/audio_platform_info_intcodec.xml
