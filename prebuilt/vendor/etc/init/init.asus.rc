@@ -507,7 +507,7 @@ on post-fs-data
     chmod 0660 /dev/pn553
     chown nfc nfc /dev/pn553
 
-on charger
+on property:init.svc.vendor.charger=running
     trigger charger_QTR
 # ASUS BSP COS mode +++
     chmod 0666 /sys/class/leds/red/brightness

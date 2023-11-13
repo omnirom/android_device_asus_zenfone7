@@ -140,8 +140,6 @@ persist.vendor.sys.downloadmode.enable=0
 # [ASUS BSP] for Poweroff Alarm Support
 # remove this becuase ASUS inform design change to PM feature: asus.software.poweroffalarm_support
 # ro.vendor.asus.poweroffalarm_support=1
-#Battery Property
-ro.charger.enable_suspend=1
 #Disable MTE Async for system server
 arm64.memtag.process.system_server=off
 ro.soc.manufacturer=QTI
