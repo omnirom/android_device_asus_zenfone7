@@ -493,6 +493,11 @@ VENDOR_SKIP_FILES_COMMON=(
     "lib/libsdmcore.so"
     "lib/libsdmutils.so"
 
+    # DRM
+    "bin/hw/android.hardware.drm@1.3-service.clearkey"
+    "etc/init/android.hardware.drm@1.3-service.clearkey.rc"
+    "etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml"
+
     # Health
     "bin/hw/android.hardware.health@2.1-service"
     "etc/init/android.hardware.health@2.1-service.rc"
@@ -877,7 +882,6 @@ as_module "etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml"
 as_module "etc/vintf/manifest/android.hardware.usb@1.2-service.xml"
 as_module "etc/vintf/manifest/android.hardware.wifi.hostapd.xml"
 as_module "etc/vintf/manifest/c2_manifest_vendor.xml"
-as_module "etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml"
 as_module "etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml"
 as_module "etc/vintf/manifest/power.xml"
 as_module "etc/vintf/manifest/vendor.goodix.hardware.biometrics.fingerprint.xml"
