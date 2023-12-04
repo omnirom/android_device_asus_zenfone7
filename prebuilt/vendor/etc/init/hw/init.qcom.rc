@@ -219,10 +219,6 @@ on boot
     mkdir /persist/display 0770 system graphics
     mkdir /mnt/vendor/persist/display 0770 system graphics
 
-    # ASUS_BSP +++ ClayWang "For checking support front RGB or not"
-    setprop ro.asus.screen.colortemp.enable 0
-    # ASUS_BSP --- ClayWang "For checking support front RGB or not"
-
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
