@@ -1,3 +1,7 @@
+# Asus Filesystem
+/dev/block/platform/soc/1d84000\.ufshc/by-name/motor_fw1                            u:object_r:asdf_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/motor_fw2                            u:object_r:asdf_block_device:s0
+
 # Asus Sp
 /(vendor|system/vendor)/bin/adrt_service                                            u:object_r:asus_sp_exec:s0
 /(vendor|system/vendor)/bin/change_aps                                              u:object_r:asus_sp_exec:s0
