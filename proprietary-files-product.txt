@@ -18,6 +18,7 @@ system_ext/etc/seccomp_policy/perfservice.policy
 # QTI Telephony
 -system_ext/app/DynamicDDSService/DynamicDDSService.apk
 -product/app/uimgbaservice/uimgbaservice.apk
+-system_ext/framework/embmslibrary.jar
 system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/embms-noship_product_privapp_permissions_qti.xml
 product/etc/permissions/UimGba.xml
@@ -32,9 +33,13 @@ product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:system
 -system_ext/framework/vendor.qti.hardware.data.connection-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.connection-V1.1-java.jar
 -system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar
+-system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.1-java.jar
 -system_ext/framework/vendor.qti.data.factory-V1.0-java.jar
 -system_ext/framework/vendor.qti.data.factory-V2.0-java.jar
 -system_ext/framework/vendor.qti.data.factory-V2.1-java.jar
+-system_ext/framework/vendor.qti.data.factory-V2.2-java.jar
+-system_ext/framework/vendor.qti.data.factory-V2.3-java.jar
+-system_ext/framework/vendor.qti.data.factory-V2.4-java.jar
 -system_ext/framework/vendor.qti.data.slm-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
@@ -43,9 +48,13 @@ product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:system
 system_ext/lib64/vendor.qti.hardware.data.connection@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.connection@1.1.so
 system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.1.so
 system_ext/lib64/vendor.qti.data.factory@1.0.so
 system_ext/lib64/vendor.qti.data.factory@2.0.so
 system_ext/lib64/vendor.qti.data.factory@2.1.so
+system_ext/lib64/vendor.qti.data.factory@2.2.so
+system_ext/lib64/vendor.qti.data.factory@2.3.so
+system_ext/lib64/vendor.qti.data.factory@2.4.so
 system_ext/lib64/vendor.qti.hardware.data.latency@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so
@@ -53,6 +62,8 @@ system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so
+system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so
+system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.1.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.2.so
@@ -61,6 +72,7 @@ system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 system_ext/lib64/vendor.qti.latency@2.0.so
+system_ext/lib64/vendor.qti.latency@2.1.so
 system_ext/lib64/vendor.qti.voiceprint@1.0.so
 
 # IMS
@@ -147,6 +159,8 @@ system_ext/etc/permissions/qti_supplicant_interface.xml
 
 # System Helper
 system_ext/lib64/vendor.qti.hardware.embmssl@1.0.so
+system_ext/lib64/vendor.qti.hardware.embmssl@1.1.so
 system_ext/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so
+system_ext/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.trustedui@1.0.so
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
