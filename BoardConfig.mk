@@ -69,10 +69,6 @@ TARGET_MODULE_ALIASES := \
     wcd_core_dlkm.ko:audio_wcd_core.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
 
-# Kernel Wlan Module
-TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_qca6390.ko
-
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
