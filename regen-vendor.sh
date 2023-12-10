@@ -345,6 +345,11 @@ VENDOR_SKIP_FILES_COMMON=(
     # Camera
     "lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so"
 
+    # Cas
+    "bin/hw/android.hardware.cas@1.2-service"
+    "etc/init/android.hardware.cas@1.2-service.rc"
+    "etc/vintf/manifest/android.hardware.cas@1.2-service.xml"
+
     # config.fs
     "etc/fs_config_dirs"
     "etc/fs_config_files"
@@ -880,7 +885,6 @@ function as_module() {
 presign "app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk"
 
 as_module "etc/vintf/manifest/android.hardware.boot@1.1.xml"
-as_module "etc/vintf/manifest/android.hardware.cas@1.2-service.xml"
 as_module "etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml"
 as_module "etc/vintf/manifest/android.hardware.lights-qti.xml"
 as_module "etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml"
