@@ -343,6 +343,7 @@ VENDOR_SKIP_FILES_COMMON=(
     "default.prop"
 
     # Camera
+    "etc/init/android.hardware.camera.provider@2.4-service_64.rc"
     "lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so"
 
     # Cas
