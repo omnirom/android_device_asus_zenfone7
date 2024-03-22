@@ -32,7 +32,7 @@ service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provid
     group audio camera input drmrpc oem_2907
     ioprio rt 4
     capabilities SYS_NICE
-    task_profiles CameraServiceCapacity HighPerformance
+    task_profiles CameraServiceCapacity MaxPerformance
 
 service vendor-qti-media-c2-hal-1-0 /vendor/bin/hw/vendor.qti.media.c2@1.0-service
     override
