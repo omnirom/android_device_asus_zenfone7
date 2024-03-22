@@ -3,5 +3,5 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     omni_zenfone7-ap1a-user \
-    omni_zenfone7-ap1a-nk_staging-userdebug \
+    omni_zenfone7-ap1a-userdebug \
     omni_zenfone7-ap1a-eng
