@@ -1,4 +1,5 @@
 runtime_resource_overlay {
     name: "FrameworksResDeviceOverlay",
+    theme: "FrameworksResDeviceOverlay",
     product_specific: true,
 }
