@@ -1,4 +1,5 @@
 runtime_resource_overlay {
     name: "SettingsDeviceOverlay",
+    theme: "SettingsDeviceOverlay",
     product_specific: true,
 }
