@@ -565,8 +565,10 @@ VENDOR_SKIP_FILES_COMMON=(
     "etc/vintf/manifest/manifest.xml"
 
     # Media
+    "bin/init.qti.media.sh"
     "bin/hw/android.hardware.media.omx@1.0-service"
     "etc/init/android.hardware.media.omx@1.0-service.rc"
+    "etc/init/init.qti.media.rc"
     "lib/libstagefright_bufferpool@2.0.1.so"
     "lib/libstagefright_soft_aacdec.so"
     "lib/libstagefright_soft_aacenc.so"
@@ -593,6 +595,24 @@ VENDOR_SKIP_FILES_COMMON=(
     "lib/libstagefright_softomx_plugin.so"
     "lib64/libstagefright_bufferpool@2.0.1.so"
     "lib64/libstagefright_softomx.so"
+    "lib/libOmxAacEnc.so"
+    "lib64/libOmxAacEnc.so"
+    "lib/libOmxAmrEnc.so"
+    "lib64/libOmxAmrEnc.so"
+    "lib/libOmxCore.so"
+    "lib64/libOmxCore.so"
+    "lib/libOmxEvrcEnc.so"
+    "lib64/libOmxEvrcEnc.so"
+    "lib/libOmxG711Enc.so"
+    "lib64/libOmxG711Enc.so"
+    "lib/libOmxQcelp13Enc.so"
+    "lib64/libOmxQcelp13Enc.so"
+    "lib/libOmxVdec.so"
+    "lib64/libOmxVdec.so"
+    "lib/libOmxVenc.so"
+    "lib64/libOmxVenc.so"
+    "lib/libstagefrighthw.so"
+    "lib64/libstagefrighthw.so"
     "lib/vndk/libstagefright_foundation.so"
     "lib/vndk/libstagefright_omx.so"
 
@@ -885,6 +905,7 @@ function as_module() {
 
 presign "app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk"
 
+as_module "lib/libfastcvopt.so.so"
+as_module "lib64/libfastcvopt.so.so"
 as_module "lib/libthermalclient.so"
 as_module "lib64/libthermalclient.so"
-
