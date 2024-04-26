@@ -565,8 +565,26 @@ VENDOR_SKIP_FILES_COMMON=(
     "etc/vintf/manifest/manifest.xml"
 
     # Media
+    "bin/init.qti.media.sh"
     "bin/hw/android.hardware.media.omx@1.0-service"
     "etc/init/android.hardware.media.omx@1.0-service.rc"
+    "etc/init/init.qti.media.rc"
+    "lib/libc2dcolorconvert.so"
+    "lib64/libc2dcolorconvert.so"
+    "lib/libmm-omxcore.so"
+    "lib64/libmm-omxcore.so"
+    "lib/libOmxCore.so"
+    "lib64/libOmxCore.so"
+    "lib/libOmxSwVdec.so"
+    "lib64/libOmxSwVdec.so"
+    "lib/libOmxSwVencMpeg4.so"
+    "lib64/libOmxSwVencMpeg4.so"
+    "lib/libOmxVdec.so"
+    "lib64/libOmxVdec.so"
+    "lib/libOmxVenc.so"
+    "lib64/libOmxVenc.so"
+    "lib/libstagefrighthw.so"
+    "lib64/libstagefrighthw.so"
     "lib/libstagefright_bufferpool@2.0.1.so"
     "lib/libstagefright_soft_aacdec.so"
     "lib/libstagefright_soft_aacenc.so"
@@ -885,6 +903,7 @@ function as_module() {
 
 presign "app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk"
 
+as_module "lib/libfastcvopt.so.so"
+as_module "lib64/libfastcvopt.so.so"
 as_module "lib/libthermalclient.so"
 as_module "lib64/libthermalclient.so"
-
