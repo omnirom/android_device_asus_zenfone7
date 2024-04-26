@@ -159,7 +159,6 @@ vendor/bin/init.qcom.usb.sh
 vendor/bin/init.qti.chg_policy.sh
 vendor/bin/init.qti.dcvs.sh
 vendor/bin/init.qti.ims.sh
-vendor/bin/init.qti.media.sh
 vendor/bin/init.qti.qcv.sh
 vendor/bin/ipacm
 vendor/bin/ipacm-diag
@@ -415,7 +414,6 @@ vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.goodixfp.rc
 vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/init.qti.fm.rc
-vendor/etc/init/init.qti.media.rc
 vendor/etc/init/init.qti.qcv.rc
 vendor/etc/init/init.time_daemon.rc
 vendor/etc/init/init.vendor.qti.spu@1.0-service.rc
@@ -1429,7 +1427,6 @@ vendor/lib/libOmxAmrEnc.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxCore.so
 vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxEvrcEnc.so
@@ -1441,8 +1438,6 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxQcelp13Enc.so
 vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
-vendor/lib/libOmxVdec.so
-vendor/lib/libOmxVenc.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
@@ -1491,7 +1486,6 @@ vendor/lib/libboot_control_qti.so
 vendor/lib/libbt-hidlclient.so
 vendor/lib/libbtnv.so
 vendor/lib/libc2d30_bltlib.so
-vendor/lib/libc2dcolorconvert.so
 vendor/lib/libcacertclient.so
 vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamerapostproc.so
@@ -1547,7 +1541,7 @@ vendor/lib/libdsutils.so
 vendor/lib/libexthwplugin.so
 vendor/lib/libfastcrc.so
 vendor/lib/libfastcvdsp_stub.so
-vendor/lib/libfastcvopt.so
+-vendor/lib/libfastcvopt.so
 vendor/lib/libgarden.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
@@ -1596,7 +1590,6 @@ vendor/lib/libminkdescriptor.so
 vendor/lib/libminksocket.so
 vendor/lib/libmiracast.so
 vendor/lib/libmm-color-convertor.so
-vendor/lib/libmm-omxcore.so
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libmmosal.so
@@ -1723,7 +1716,6 @@ vendor/lib/libstagefright_amrnb_common.so
 vendor/lib/libstagefright_enc_common.so
 vendor/lib/libstagefright_flacdec.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
-vendor/lib/libstagefrighthw.so
 vendor/lib/libstreamparser.so
 vendor/lib/libsubsystem_control.so
 vendor/lib/libsurround_3mic_proc.so
@@ -2135,7 +2127,6 @@ vendor/lib64/libOmxAmrEnc.so
 vendor/lib64/libOmxAmrwbplusDec.so
 vendor/lib64/libOmxApeDec.so
 vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxCore.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxEvrcEnc.so
 vendor/lib64/libOmxG711Dec.so
@@ -2145,8 +2136,6 @@ vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxQcelp13Enc.so
 vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
-vendor/lib64/libOmxVdec.so
-vendor/lib64/libOmxVenc.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libOpenCL.so
@@ -2205,7 +2194,6 @@ vendor/lib64/libboot_control_qti.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libc2dcolorconvert.so
 vendor/lib64/libcacertclient.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamerapostproc.so
@@ -2258,7 +2246,7 @@ vendor/lib64/libdsutils.so
 vendor/lib64/libembmsservice.so
 vendor/lib64/libexthwplugin.so
 vendor/lib64/libfastcvdsp_stub.so
-vendor/lib64/libfastcvopt.so
+-vendor/lib64/libfastcvopt.so
 vendor/lib64/libgameoptfeature.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
@@ -2322,7 +2310,6 @@ vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket.so
 vendor/lib64/libmiracast.so
 vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmm-omxcore.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmmosal.so
@@ -2450,7 +2437,6 @@ vendor/lib64/libssc_default_listener.so
 vendor/lib64/libssd.so
 vendor/lib64/libssrec.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
-vendor/lib64/libstagefrighthw.so
 vendor/lib64/libsubsystem_control.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
