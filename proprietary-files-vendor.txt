@@ -348,8 +348,8 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/configstore/wigig.xml
-vendor/etc/data/dsi_config.xml
-vendor/etc/data/netmgr_config.xml
+vendor/etc/data/dsi_config.xml;FIX_XML
+vendor/etc/data/netmgr_config.xml;FIX_XML
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/default_volume_tables_ZS670KS.xml
