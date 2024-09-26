@@ -287,3 +287,8 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
 persist.sys.sf.color_mode=1
 vendor.display.disable_offline_rotator=1
 debug.sf.enable_gl_backpressure=1
+
+# ZRAM writeback
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
