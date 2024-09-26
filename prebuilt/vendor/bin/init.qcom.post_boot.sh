@@ -927,8 +927,8 @@ low_ram=`getprop ro.config.low_ram`
 
 if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ]; then
       # Enable ZRAM
-      configure_zram_parameters
-      echo 0 > /proc/sys/vm/page-cluster
+      #configure_zram_parameters
+      #echo 0 > /proc/sys/vm/page-cluster
       echo 100 > /proc/sys/vm/swappiness
 else
     arch_type=`uname -m`
