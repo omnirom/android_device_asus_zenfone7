@@ -13,6 +13,9 @@
 /motor_fw1(/.*)?                                                                    u:object_r:log_file:s0
 /motor_fw2(/.*)?                                                                    u:object_r:log_file:s0
 
+# Fingerprint
+/sys/devices/platform/soc/0.goodix_gf3626/goodix_fp/goodix_fp/proximity_state         u:object_r:vendor_sysfs_proximity:s0
+
 # Touch
 /(vendor|system/vendor)/bin/init.asus.gamemode.sh                                   u:object_r:asus_touch_exec:s0
 /(vendor|system/vendor)/bin/touch_ver.sh                                            u:object_r:asus_touch_exec:s0
