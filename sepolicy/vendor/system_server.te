@@ -1,2 +1,5 @@
 # Display
 allow system_server asus_display_proc_exec:file rw_file_perms;
+
+# Fingerprint
+allow system_server vendor_sysfs_proximity:file { getattr rw_file_perms };
