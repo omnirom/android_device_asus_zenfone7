@@ -1,6 +1,5 @@
 vendor/app/CACertService/CACertService.apk
 vendor/app/CneApp/CneApp.apk
-vendor/app/CneApp/lib/arm64/libvndfwk_detect_jni.qti.so
 vendor/app/IWlanService/IWlanService.apk
 vendor/app/TimeService/TimeService.apk
 vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk
@@ -1723,7 +1722,7 @@ vendor/lib/libsynergy_loc_api.so
 vendor/lib/libsynx.so
 vendor/lib/libsysmon_cdsp_skel.so
 vendor/lib/libsystem_health_mon.so
--vendor/lib/libthermalclient.so
+vendor/lib/libthermalclient.so
 vendor/lib/libthreadutils.so
 vendor/lib/libtime_genoff.so
 vendor/lib/libtinycompress.so
@@ -2448,7 +2447,7 @@ vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsynx.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/libsystem_health_mon.so
--vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalclient.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libtime_genoff.so
 vendor/lib64/libtinycompress.so
