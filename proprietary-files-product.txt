@@ -29,7 +29,7 @@ system_ext/framework/embmslibrary.jar
 # ROG 5
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
-system_ext/framework/qti-telephony-common.jar|07B2B91F5D547C5B5E0752F0F5534321BC93A2C1
+system_ext/framework/qti-telephony-common.jar|07b2b91f5d547c5b5e0752f0f5534321bc93a2c1
 system_ext/framework/vendor.qti.data.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.data.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.data.factory-V2.1-java.jar
