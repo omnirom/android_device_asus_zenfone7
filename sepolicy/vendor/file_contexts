@@ -83,3 +83,6 @@
 # Touch
 /(vendor|system/vendor)/bin/init.asus.gamemode.sh                                   u:object_r:asus_touch_exec:s0
 /(vendor|system/vendor)/bin/touch_ver.sh                                            u:object_r:asus_touch_exec:s0
+
+# ZRAM
+/data/per_boot(/.*)?                                            u:object_r:per_boot_file:s0

@@ -6,3 +6,6 @@ allow kernel log_file:file create_file_perms;
 allow kernel log_file:file rw_file_perms;
 
 #allow kernel mnt_vendor_file:dir search;
+
+# ZRAM
+allow kernel per_boot_file:file r_file_perms;

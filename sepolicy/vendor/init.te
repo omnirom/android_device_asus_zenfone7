@@ -23,3 +23,7 @@ allow init lasercsc:process transition;
 allow init asus_storage_exec:file r_file_perms;
 
 get_prop(init, asus_sensors_prop)
+
+# ZRAM
+allow init per_boot_file:file ioctl;
+allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };

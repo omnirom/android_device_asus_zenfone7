@@ -33,3 +33,6 @@ type xrom_file, file_type;
 
 # Smart key
 type vendor_sysfs_gestures, sysfs_type, fs_type;
+
+# ZRAM
+type per_boot_file, file_type, data_file_type, core_data_file_type;
