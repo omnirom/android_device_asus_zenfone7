@@ -1156,7 +1156,6 @@ vendor/lib/ese_client.so
 vendor/lib/ftm_fm_lib.so
 vendor/lib/hal_libnfc.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/android.hardware.boot@1.0-impl-1.1-qti.so
 vendor/lib/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib/hw/audio.primary.kona.so
 vendor/lib/hw/audio.r_submix.default.so
@@ -1747,7 +1746,6 @@ vendor/lib64/ese_client.so
 vendor/lib64/ftm_fm_lib.so
 vendor/lib64/hal_libnfc.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.boot@1.0-impl-1.1-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/hw/audio.primary.kona.so
