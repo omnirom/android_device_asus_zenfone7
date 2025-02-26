@@ -18,7 +18,6 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
-
 namespace_imports = [
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
@@ -33,16 +32,34 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
+        'com.qualcomm.qti.dpm.api@1.0',
+        'vendor.qti.imsrtpservice@3.0',
+        'libAsusMotorDriverHAL',
+        'libAsusRGBSensorHAL',
+        'libmpbase',
+        'libxditk_DIT_Manager',
+        'libxditk_ISP',
+        'libxditk_arch',
+        'libxditk_ditArchLIB',
+        'libxditk_ditBSP',
+        'libxditk_ditBSP_JNI',
+        'libxditk_DIT_MSMv1',
     ): lib_fixup_vendor_suffix,
     (
+        'libwpa_client',
     ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
-    ('system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml',
-     'system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml'): blob_fixup()
-        .regex_replace('system/product', 'system_ext')
-        .regex_replace('xml version="2.0"', 'xml version="1.0"'),
+    ('system/lib64/libxditk_ISP.so',
+     'system/lib64/libxditk_ditArchLIB.so'): blob_fixup()
+        .replace_needed('libOpenCL.so', 'libOpenCL_system.so'),
+    'vendor/bin/hw/vendor.ozoaudio.media.c2@1.0-service': blob_fixup()
+        .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
+    'vendor/bin/hw/android.hardware.lights-service.qti': blob_fixup()
+        .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
+    'vendor/bin/hw/android.hardware.power-service': blob_fixup()
+        .replace_needed('android.hardware.power-V1-ndk_platform.so', 'android.hardware.power-V1-ndk.so'),
     'vendor/etc/seccomp_policy/qspm.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
     'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
@@ -59,7 +76,6 @@ module = ExtractUtilsModule(
     'asus',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
-    check_elf=False,
     namespace_imports=namespace_imports,
 )
 
