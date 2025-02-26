@@ -2,13 +2,6 @@
 system_ext/app/AntHalService-Soong/AntHalService-Soong.apk
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Audio
-system_ext/etc/cdma_call_conf.xml
-system_ext/lib64/libadsprpc_system.so
-system_ext/lib64/libcdsprpc_system.so
-system_ext/lib64/libmdsprpc_system.so
-system_ext/lib64/libsdsprpc_system.so
-
 # Bluetooth
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
@@ -24,24 +17,8 @@ system/lib64/libxditk_arch.so
 system/lib64/libxditk_ditArchLIB.so
 system/lib64/libxditk_ditBSP.so
 system/lib64/libxditk_ditBSP_JNI.so
-system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2
-system/priv-app/AsusCamera/lib/arm64/libUndistort.so
-system/priv-app/AsusCamera/lib/arm64/libarcsoft_object_tracking.so
-system/priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_burstcapture.so
-system/priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_interval_capture.so
-system/priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_rog3.so
-system/priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_zf7.so
-system/priv-app/AsusCamera/lib/arm64/libasus_camera_interval_panorama.so
-system/priv-app/AsusCamera/lib/arm64/libasus_camera_object_tracking.so
-system/priv-app/AsusCamera/lib/arm64/libasus_camera_panorama.so
-system/priv-app/AsusCamera/lib/arm64/libasus_camera_selfiepano.so
-system/priv-app/AsusCamera/lib/arm64/libasusundistort.so
-system/priv-app/AsusCamera/lib/arm64/libbitmap.so
-system/priv-app/AsusCamera/lib/arm64/libmpbase.so
-system/priv-app/AsusCamera/lib/arm64/librenderscript-toolkit.so
-system/priv-app/AsusCamera/lib/arm64/libtensorflowlite_jni.so
-system/priv-app/AsusCamera/lib/arm64/libyuv_camera.so
-system/priv-app/AsusCamera/lib/arm64/libyuv_util.so
+# apktool d *.apk, move all libs into apk and apktool b *
+system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2|c72bf16fae877225f1d2a53e0c05078500e95697
 
 system_ext/etc/hdr_config/ans_off/ans_config.txt
 system_ext/etc/hdr_config/ans_on/ans_config.txt
@@ -146,40 +123,9 @@ system_ext/etc/hdr_config/wnr_off/wnr_params.txt
 system_ext/etc/hdr_config/wnr_on/wnr_config.txt
 system_ext/etc/hdr_config/wnr_on/wnr_params.txt
 
-# CNE
-system_ext/framework/com.quicinc.cne.api-V1.0-java.jar
-system_ext/framework/com.quicinc.cne.api-V1.1-java.jar
-system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar
-system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar
-system_ext/framework/com.quicinc.cne.constants-V2.1-java.jar
-system_ext/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar
-system_ext/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar
-system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.0-java.jar
-system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.1-java.jar
-system_ext/lib64/com.quicinc.cne.api@1.0.so
-system_ext/lib64/com.quicinc.cne.api@1.1.so
-system_ext/lib64/com.quicinc.cne.constants@1.0.so
-system_ext/lib64/com.quicinc.cne.constants@2.0.so
-system_ext/lib64/com.quicinc.cne.constants@2.1.so
-system_ext/lib64/com.quicinc.cne.server@1.0.so
-system_ext/lib64/com.quicinc.cne.server@2.0.so
-system_ext/lib64/com.quicinc.cne.server@2.1.so
-system_ext/lib64/com.quicinc.cne.server@2.2.so
-system_ext/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
-system_ext/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
-system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
-system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.1.so
-
 # Device
 product/app/DeviceStatisticsService/DeviceStatisticsService.apk
 system_ext/app/DeviceInfo/DeviceInfo.apk
-
-# Display
-product/etc/permissions/com.qti.snapdragon.sdk.display.xml
-product/framework/com.qti.snapdragon.sdk.display.jar
-system_ext/app/colorservice/colorservice.apk
-system_ext/lib64/libsd_sdk_display.qti.so
-system_ext/lib64/libsdm-disp-apis.qti.so
 
 # DPM
 system/framework/tcmclient.jar
@@ -199,38 +145,11 @@ system_ext/lib64/libdpmtcm.so
 system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 
-# Gallery
-system/priv-app/AsusGallery/AsusGallery.apk
-system/priv-app/AsusGallery/lib/arm64/libNvStreamingSdkCore.so
-system/priv-app/AsusGallery/lib/arm64/libRSSupport.so
-system/priv-app/AsusGallery/lib/arm64/libarcsoft_beautyshot.so
-system/priv-app/AsusGallery/lib/arm64/libarcsoft_undistort.so
-system/priv-app/AsusGallery/lib/arm64/libblur.so
-system/priv-app/AsusGallery/lib/arm64/libcvface_api.so
-system/priv-app/AsusGallery/lib/arm64/libgif.so
-system/priv-app/AsusGallery/lib/arm64/libgvr.so
-system/priv-app/AsusGallery/lib/arm64/libjni_cvface_api.so
-system/priv-app/AsusGallery/lib/arm64/libjni_face_effect.so
-system/priv-app/AsusGallery/lib/arm64/libjni_filter_show.so
-system/priv-app/AsusGallery/lib/arm64/libjni_wide_angle_undistort.so
-system/priv-app/AsusGallery/lib/arm64/libmpbase.so
-system/priv-app/AsusGallery/lib/arm64/libopencv_java3.so
-system/priv-app/AsusGallery/lib/arm64/libpano_video_renderer.so
-system/priv-app/AsusGallery/lib/arm64/libpanorenderer.so
-system/priv-app/AsusGallery/lib/arm64/librs.blur.so
-system/priv-app/AsusGallery/lib/arm64/librs.convolve3x3.so
-system/priv-app/AsusGallery/lib/arm64/librs.grad.so
-system/priv-app/AsusGallery/lib/arm64/librs.grey.so
-system/priv-app/AsusGallery/lib/arm64/librs.saturation.so
-system/priv-app/AsusGallery/lib/arm64/librs.vignette.so
-system/priv-app/AsusGallery/lib/arm64/librsjni.so
-system/priv-app/AsusGallery/lib/arm64/librsjni_androidx.so
-system/priv-app/AsusGallery/lib/arm64/libtensorflow_inference.so
-system/priv-app/AsusGallery/lib/arm64/libtensorflowlite_jni.so
+# Gallery from zenfone8 to prevent duplicate libs with AsusCamera
+system/priv-app/AsusGallery/AsusGallery.apk|8506fbc942113a0c1beca75ca23c6c1ea80b8041
 
 # GalleryBurst
-system/priv-app/AsusGalleryBurst/AsusGalleryBurst.apk
-system/priv-app/AsusGalleryBurst/lib/arm/libgifencoder.so
+system/priv-app/AsusGalleryBurst/AsusGalleryBurst.apk|99f7f5f8361645a6fa782e19502e69a5272ba989
 
 # Gallery Video Editor
 system/etc/videoeditor/Charming.mfim
@@ -312,26 +231,10 @@ product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# MirarCast
-system_ext/bin/sigma_miracasthalservice
-system_ext/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc
-system_ext/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so
-system_ext/lib64/libmiracastsystem.so
-system_ext/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so
-system_ext/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
-
 # Motor
 system/etc/permissions/asus.hardware.motor.latch_lock.xml
-system/priv-app/MotorK/MotorK.apk
-system/priv-app/MotorK/lib/arm64/libAsusMotorDriverHAL.so
-system/priv-app/MotorK/lib/arm64/libmotork-jni.so
-system/priv-app/MotorService/MotorService.apk
-system/priv-app/MotorService/lib/arm64/libAsusMotorDriverHAL.so
-system/priv-app/MotorService/lib/arm64/libjni_motor.so
-
-# Power
-system/framework/QPerformance.jar
-system/framework/UxPerformance.jar
+system/priv-app/MotorK/MotorK.apk|9214d44eb4df4e7e1b330642083e284973c992e0
+system/priv-app/MotorService/MotorService.apk|6c35e4751ff1aa9e82e9e093d8d7525a1005e1df
 
 # Telephony
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
@@ -343,15 +246,3 @@ system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/qcrilhook.jar
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-
-# Wifi
-system/framework/android.hardware.wifi.supplicant-V1.0-java.jar
-system/framework/android.hardware.wifi.supplicant-V1.1-java.jar
-system/framework/android.hardware.wifi.supplicant-V1.2-java.jar
-system/framework/android.hardware.wifi.supplicant-V1.3-java.jar
-
-# Wlan
-system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar
-system_ext/framework/vendor.qti.hardware.data.iwlan-V1.1-java.jar
-system_ext/lib64/vendor.qti.hardware.data.iwlan@1.0.so
-system_ext/lib64/vendor.qti.hardware.data.iwlan@1.1.so
