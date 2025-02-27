@@ -54,14 +54,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# DRM
-PRODUCT_PACKAGES += \
-    libcrypto_shim.vendor
-
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service \
-    libhidlbase_shim
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Health for charing control
 PRODUCT_PACKAGES += \
@@ -82,8 +77,7 @@ PRODUCT_PACKAGES += \
 
 # Perf
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.3 \
-    vendor.qti.hardware.perf@2.3.vendor
+    vendor.qti.hardware.perf@2.3
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
