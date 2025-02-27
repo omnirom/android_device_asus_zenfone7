@@ -75,6 +75,11 @@ PRODUCT_PACKAGES += \
     fts_ts.kl \
     goodixfp.kl
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.2
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.3 \
