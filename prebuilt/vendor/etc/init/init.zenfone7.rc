@@ -46,14 +46,6 @@ service vendor-qti-media-c2-hal-1-0 /vendor/bin/hw/vendor.qti.media.c2@1.0-servi
     ioprio rt 4
     task_profiles ProcessCapacityHigh
 
-service vendor-ozoaudio-media-c2-hal-1-0 /vendor/bin/hw/vendor.ozoaudio.media.c2@1.0-service
-    override
-    class hal
-    user mediacodec
-    group camera mediadrm drmrpc system
-    ioprio rt 4
-    task_profiles ProcessCapacityHigh
-
 service vendor.sensors-hal-2-0-multihal /vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
     override
     class hal

@@ -54,8 +54,6 @@ blob_fixups: blob_fixups_user_type = {
     ('system/lib64/libxditk_ISP.so',
      'system/lib64/libxditk_ditArchLIB.so'): blob_fixup()
         .replace_needed('libOpenCL.so', 'libOpenCL_system.so'),
-    'vendor/bin/hw/vendor.ozoaudio.media.c2@1.0-service': blob_fixup()
-        .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     'vendor/bin/hw/android.hardware.lights-service.qti': blob_fixup()
         .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
     'vendor/bin/hw/android.hardware.power-service': blob_fixup()

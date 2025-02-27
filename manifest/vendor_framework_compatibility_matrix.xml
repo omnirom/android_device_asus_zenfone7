@@ -27,7 +27,6 @@
         <interface>
             <name>IComponentStore</name>
             <instance>default</instance>
-            <instance>ozoaudio</instance>
             <instance>software</instance>
         </interface>
     </hal>

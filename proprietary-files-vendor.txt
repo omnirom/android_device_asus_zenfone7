@@ -117,7 +117,6 @@ vendor/bin/hw/android.hardware.thermal@2.0-service.qti
 vendor/bin/hw/android.hardware.usb@1.2-service-qti
 vendor/bin/hw/qcrild
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/hw/vendor.ozoaudio.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -419,7 +418,6 @@ vendor/etc/init/qseecomd.rc
 vendor/etc/init/slad.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/etc/init/vendor.ozoaudio.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.adsprpc-service.rc
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
@@ -763,7 +761,6 @@ vendor/etc/mixer_paths_ZS670KS.xml
 vendor/etc/mixer_paths_cdp.xml
 vendor/etc/mixer_paths_qrd.xml
 vendor/etc/msm_irqbalance.conf
-vendor/etc/ozosdk.license
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/commonsysnodesconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
@@ -1447,8 +1444,6 @@ vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
-vendor/lib/libav_ozodecoder.so
-vendor/lib/libav_ozoencoder.so
 vendor/lib/libbase64.so
 vendor/lib/libbatching.so
 vendor/lib/libbatterylistener.so
@@ -1485,8 +1480,6 @@ vendor/lib/libcne.so;DISABLE_CHECKELF
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
-vendor/lib/libcodec2_soft_ozodec.so
-vendor/lib/libcodec2_soft_ozoenc.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libconfigdb.so
@@ -1580,9 +1573,6 @@ vendor/lib/libofflinelog.so
 vendor/lib/libopenvx.so
 vendor/lib/libops.so
 vendor/lib/libos.so
-vendor/lib/libozoaudiodecoder.so
-vendor/lib/libozoaudioencoder.so
-vendor/lib/libozoc2store.so;DISABLE_CHECKELF
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
 vendor/lib/libperfconfig.so
@@ -1743,7 +1733,6 @@ vendor/lib/soundfx/libdownmix.so
 vendor/lib/soundfx/libdynproc.so
 vendor/lib/soundfx/libeffectproxy.so
 vendor/lib/soundfx/libldnhncr.so
-vendor/lib/soundfx/libozoprocessing.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcompostprocbundle.so
 vendor/lib/soundfx/libqcomvisualizer.so
@@ -2133,7 +2122,6 @@ vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
-vendor/lib64/libav_ozoencoder.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbatching.so
 vendor/lib64/libbatterylistener.so
@@ -2277,7 +2265,6 @@ vendor/lib64/liboffloadhal.so
 vendor/lib64/libopenvx.so
 vendor/lib64/libops.so
 vendor/lib64/libos.so
-vendor/lib64/libozoaudioencoder.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libperfconfig.so
@@ -2429,7 +2416,6 @@ vendor/lib64/soundfx/libdownmix.so
 vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libeffectproxy.so
 vendor/lib64/soundfx/libldnhncr.so
-vendor/lib64/soundfx/libozoprocessing.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
