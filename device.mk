@@ -46,6 +46,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration_ZS670KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_volumes_ZS670KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes_ZS670KS.xml
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-service
+
 # Camera
 PRODUCT_PACKAGES += \
     CameraTile
