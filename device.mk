@@ -102,6 +102,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libgui_shim
 
+# Soundtrigger
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.2-impl
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
