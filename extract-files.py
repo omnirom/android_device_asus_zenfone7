@@ -19,7 +19,6 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/display',
     'vendor/qcom/opensource/commonsys/display',
