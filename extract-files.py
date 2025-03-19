@@ -61,6 +61,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.power-V1-ndk_platform.so', 'android.hardware.power-V1-ndk.so'),
     'vendor/etc/seccomp_policy/qspm.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
+    'vendor/bin/hw/android.hardware.camera.provider@2.4-service_64': blob_fixup()
+        .add_needed('libhidlbase_shim.so'),
     'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
         .replace_needed('libhidltransport.so', 'libhidlbase_shim.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
