@@ -1496,7 +1496,7 @@ vendor/lib/libxml.so
 vendor/lib/libxtadapter.so
 vendor/lib/mediacas/libclearkeycasplugin.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so;DISABLE_CHECKELF
+vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/qcrild_librilutils.so
 vendor/lib/qtibus.so
 vendor/lib/qtimutex.so
@@ -2151,7 +2151,7 @@ vendor/lib64/libxml.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/mediacas/libclearkeycasplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
-vendor/lib64/mediadrm/libwvdrmengine.so;DISABLE_CHECKELF
+vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/qcrild_librilutils.so
 vendor/lib64/qtibus.so
 vendor/lib64/qtimutex.so

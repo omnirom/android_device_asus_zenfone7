@@ -63,7 +63,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
         .replace_needed('libhidltransport.so', 'libhidlbase_shim.so'),
-    'vendor/lib64/libwvhidl.so': blob_fixup()
+    ('vendor/lib/mediadrm/libwvdrmengine.so',
+     'vendor/lib64/mediadrm/libwvdrmengine.so',
+     'vendor/lib64/libwvhidl.so'): blob_fixup()
         .patchelf_version('0_17_2')
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
