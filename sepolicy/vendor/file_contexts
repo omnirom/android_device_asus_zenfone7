@@ -16,6 +16,9 @@
 # Fingerprint
 /sys/devices/platform/soc/0.goodix_gf3626/goodix_fp/goodix_fp/proximity_state         u:object_r:vendor_sysfs_proximity:s0
 
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service-qti               u:object_r:hal_power_default_exec:s0
+
 # Touch
 /(vendor|system/vendor)/bin/init.asus.gamemode.sh                                   u:object_r:asus_touch_exec:s0
 /(vendor|system/vendor)/bin/touch_ver.sh                                            u:object_r:asus_touch_exec:s0
