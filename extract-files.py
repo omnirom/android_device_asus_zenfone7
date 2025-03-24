@@ -55,8 +55,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libOpenCL.so', 'libOpenCL_system.so'),
      'system_ext/lib64/libqti-iopd-client_system.so': blob_fixup()
         .replace_needed('vendor.qti.hardware.iop@2.0.so', 'vendor.qti.hardware.iop@2.0_system.so'),
-    'vendor/bin/hw/android.hardware.power-service': blob_fixup()
-        .replace_needed('android.hardware.power-V1-ndk_platform.so', 'android.hardware.power-V1-ndk.so'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
     'vendor/etc/seccomp_policy/qspm.policy': blob_fixup()

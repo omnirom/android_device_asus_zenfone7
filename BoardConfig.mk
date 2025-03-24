@@ -87,6 +87,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 VENDOR_SECURITY_PATCH := 2023-05-01
 
 # Sepolicy
+include  vendor/omni/sepolicy/libperfmgr/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # inherit from the proprietary version

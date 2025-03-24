@@ -94,6 +94,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.3
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.lineage-libperfmgr
+
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/zenfone7/prebuilt/system,system) \
@@ -121,7 +125,10 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/omni/interfaces/power-libperfmgr \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Vibrator
 PRODUCT_PACKAGES += \
