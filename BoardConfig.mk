@@ -217,8 +217,9 @@ TARGET_USES_MKE2FS := true
 VENDOR_SECURITY_PATCH := 2023-05-01
 
 # Sepolicy
-include vendor/omni/sepolicy/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include vendor/omni/sepolicy/libperfmgr/sepolicy.mk
+include vendor/omni/sepolicy/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/product/private

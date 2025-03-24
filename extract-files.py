@@ -53,8 +53,6 @@ blob_fixups: blob_fixups_user_type = {
     ('system/lib64/libxditk_ISP.so',
      'system/lib64/libxditk_ditArchLIB.so'): blob_fixup()
         .replace_needed('libOpenCL.so', 'libOpenCL_system.so'),
-    'vendor/bin/hw/android.hardware.power-service': blob_fixup()
-        .replace_needed('android.hardware.power-V1-ndk_platform.so', 'android.hardware.power-V1-ndk.so'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
     'vendor/etc/seccomp_policy/qspm.policy': blob_fixup()
