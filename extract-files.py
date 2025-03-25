@@ -63,6 +63,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('gettid: 1'),
     'vendor/bin/hw/android.hardware.camera.provider@2.4-service_64': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+    ('vendor/lib/libreference-ril.so',
+     'vendor/lib64/libreference-ril.so'): blob_fixup()
+        .add_needed('libbase_shim.so'),
     ('vendor/lib/libqti-perfd.so',
      'vendor/lib64/libqti-perfd.so'): blob_fixup()
         .binary_regex_replace(b'sys.asus.dongletype', b'vendor.sys.asus.dongletype'),
