@@ -1,0 +1,2 @@
+# To do powerhint on nodes defined in powerhint.json
+allow hal_power_default vendor_latency_device:chr_file w_file_perms;
