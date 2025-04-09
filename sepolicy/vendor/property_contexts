@@ -13,6 +13,9 @@ vendor.use.audio.eu.parameters                                    u:object_r:exp
 # Camera
 vendor.sys.asus.camprobe                                          u:object_r:vendor_asus_prop:s0
 
+# Gallery
+persist.vendor.sys.cta.security                                  u:object_r:vendor_asus_prop:s0
+
 # Fingerprint
 vendor.gf.debug.dump_bigdata_data                                 u:object_r:vendor_gx_fpd_prop:s0
 
