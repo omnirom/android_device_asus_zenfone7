@@ -985,7 +985,6 @@ vendor/etc/sound_trigger_platform_info.xml
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/etc/system_properties.xml
-vendor/etc/thermal-engine.conf
 vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
