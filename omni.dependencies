@@ -7,6 +7,12 @@
   },
   {
     "remote": "omnirom",
+    "repository": "android_hardware_qcom_thermal",
+    "target_path": "hardware/qcom-caf/thermal",
+    "revision": "android-15"
+   },
+  {
+    "remote": "omnirom",
     "repository": "android_kernel_asus_sm8250",
     "target_path": "kernel/asus/sm8250",
     "revision": "android-15"
