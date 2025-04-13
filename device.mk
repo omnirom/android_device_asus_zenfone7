@@ -94,10 +94,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.3
 
-# Power
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/zenfone7/prebuilt/system,system) \
