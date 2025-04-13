@@ -208,15 +208,6 @@ service wifimacsh /vendor/bin/sh /vendor/bin/WifiMac.sh
     disabled
 #ASUS_BSP_WIFI
 
-#ASUS_BSP_WIFI +++ SAR Reduce wifi power
-service SARPower-sh /vendor/bin/sh /vendor/bin/WifiSARPower.sh
-    class core
-    user root
-    group root
-    disabled
-    oneshot
-#ASUS_BSP_WIFI +++ SAR Reduce wifi power
-
 #ASUS_BSP +++ BT WIFI MAC, BT WIFI firmware version
 service qcfwver /vendor/bin/qcfwver
     seclabel u:r:asus_bluetooth:s0
@@ -334,24 +325,6 @@ on property:persist.vendor.asus.wlanfwdbg=*
 
 on property:sys.boot_completed=1
     start wifimacsh
-
-#ASUS_BSP_WIFI +++ SAR Reduce wifi power
-on property:vendor.asus.operator.iso-country=*
-    restart SARPower-sh
-
-on property:wlan.driver.status=*
-    restart SARPower-sh
-
-on property:vendor.wlan.dbs=*
-    restart SARPower-sh
-
-on property:vendor.wlan.softap.driver.status=*
-    restart SARPower-sh
-
-on property:vendor.sla.enabled=*
-    restart SARPower-sh
-
-#ASUS_BSP_WIFI --- SAR Reduce wifi power
 
 # ASUS_BSP+++ for wlan miracast log
 on property:persist.vendor.asus.miracastlog=1

@@ -68,12 +68,6 @@ vendor/bin/charger_limit
 vendor/bin/climax
 vendor/bin/cnd
 vendor/bin/cnss-daemon
-vendor/bin/diag_callback_sample
-vendor/bin/diag_dci_sample
-vendor/bin/diag_klog
-vendor/bin/diag_mdlog
-vendor/bin/diag_socket_log
-vendor/bin/diag_uart_log
 vendor/bin/dit_ae_cali
 vendor/bin/dit_af_cali
 vendor/bin/dit_cali
@@ -176,7 +170,6 @@ vendor/bin/netmgrd
 vendor/bin/nn_device_test
 vendor/bin/npu_launcher
 vendor/bin/nqnfcinfo
-vendor/bin/parse.simcode.sh
 vendor/bin/pd-mapper
 vendor/bin/pktlogconf
 vendor/bin/pm-proxy
