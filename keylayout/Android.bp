@@ -1,4 +1,5 @@
 prebuilt_usr_keylayout {
     name: "keylayout_data_zenfone7.kl",
     srcs: ["*.kl"],
+    vendor: true,
 }
