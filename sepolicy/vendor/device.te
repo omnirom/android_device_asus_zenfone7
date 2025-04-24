@@ -1,0 +1,14 @@
+# Block
+type asdf_block_device, dev_type;
+type asus_block_device, dev_type;
+
+# Goodix
+type fingerprintd_device, dev_type;
+
+# Motor camera
+type asus_laser_device, dev_type;
+type asus_motor_device, dev_type;
+type asus_sensors_device, dev_type;
+
+# Storage
+type sysinfo_block_device, dev_type;

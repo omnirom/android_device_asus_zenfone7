@@ -37,7 +37,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/asus/zenfone7/device.mk)
-$(call inherit-product, device/asus/sm8250-common/omni_common.mk)
+$(call inherit-product, device/asus/zenfone7/omni_common.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := zenfone7

@@ -1,3 +1,7 @@
+allow priv_app system_lib_file:file { read getattr lock open };
+
+get_prop(priv_app, asus_prop)
+
 # Pixelworks
 allow priv_app asus_display_proc_exec:file rw_file_perms;
 hal_client_domain(priv_app, hal_display_iris)

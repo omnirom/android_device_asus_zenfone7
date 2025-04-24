@@ -1,27 +1,112 @@
 [
-  {
+   {
     "remote": "omnirom",
-    "repository": "android_device_asus_sm8250-common",
-    "target_path": "device/asus/sm8250-common",
+    "repository": "android_device_qcom_caf-sepolicy",
+    "target_path": "device/qcom/sepolicy",
     "revision": "android-15"
-  },
-  {
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_device_qcom_sepolicy_vndr",
+    "target_path": "device/qcom/sepolicy_vndr",
+    "revision": "android-15"
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_external_tinycompress",
+    "target_path": "external/tinycompress",
+    "override": "platform/external/tinycompress",
+    "revision": "android-15"
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_bootctrl",
+    "target_path": "hardware/qcom/bootctrl",
+    "revision": "android-15"
+    },
+   {
     "remote": "omnirom",
     "repository": "android_hardware_qcom_thermal",
     "target_path": "hardware/qcom-caf/thermal",
     "revision": "android-15"
    },
-  {
+   {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_wlan",
+    "target_path": "hardware/qcom-caf/wlan",
+    "revision": "android-15-caf"
+   },
+   {
     "remote": "omnirom",
     "repository": "android_kernel_asus_sm8250",
     "target_path": "kernel/asus/sm8250",
     "revision": "android-15"
-  },
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_vendor_codeaurora_telephony",
+    "target_path": "vendor/codeaurora/telephony",
+    "revision": "android-15"
+   },
+   {
+     "remote": "gitlab",
+     "repository": "android_hardware_omni_compat",
+     "target_path": "hardware/omni/compat",
+     "revision": "android-15"
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_display",
+    "target_path": "hardware/qcom-caf/sm8250/display",
+    "revision": "android-15-sm8250"
+   },
+   {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_core-utils-vendor",
+    "target_path": "vendor/qcom/opensource/core-utils-vendor",
+    "revision": "lineage-22.1"
+   },
+   {
+     "remote": "gitlab",
+     "repository": "android_vendor_qcom_opensource_display",
+     "target_path": "vendor/qcom/opensource/display",
+     "revision": "android-15"
+   },
+   {
+     "remote": "gitlab",
+     "repository": "android_vendor_qcom_opensource_display-commonsys",
+     "target_path": "vendor/qcom/opensource/commonsys/display",
+     "revision": "android-15"
+   },
+   {
+     "remote": "gitlab",
+     "repository": "android_vendor_qcom_opensource_display-commonsys-intf",
+     "target_path": "vendor/qcom/opensource/commonsys-intf/display",
+     "revision": "android-15"
+   },
+   {
+     "remote": "omnirom",
+     "repository": "android_vendor_qcom_opensource_fm-commonsys",
+     "target_path": "vendor/qcom/opensource/commonsys/fm",
+     "revision": "android-14.0"
+   },
+   {
+     "remote": "omnirom",
+     "repository": "android_vendor_qcom_opensource_interfaces",
+     "target_path": "vendor/qcom/opensource/interfaces",
+     "revision": "android-15"
+   },
    {
     "remote": "gitlab",
     "repository": "android_vendor_qcom_opensource_power",
     "target_path": "vendor/qcom/opensource/power",
     "revision": "android-15"
+   },
+   {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_thermal-engine",
+    "target_path": "vendor/qcom/opensource/thermal-engine",
+    "revision": "lineage-20.0"
    },
   {
     "remote": "gitlab",

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+    package="org.omnirom.device"
+    android:sharedUserId="android.uid.system" >
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.asus.focusapplistener.permission.GAME_GENIE_PROVIDER"/>
+    <uses-permission android:name="com.asus.hardwarestub.permission.FPS_CENTRAL_CONTROL_SERVICE"/>
+
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+    <protected-broadcast android:name="com.asus.airtriggers.SYSTEMUI_AIR_TRIGGER_ON" />
+    <protected-broadcast android:name="com.asus.airtriggers.SYSTEMUI_AIR_TRIGGER_OFF" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/advanced_settings"
+        android:theme="@style/AppTheme"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        tools:replace="android:appComponentFactory"
+        android:supportsRtl="true" >
+        <activity
+             android:name="org.omnirom.device.TileActivity"
+             android:taskAffinity=""
+             android:excludeFromRecents="true"
+             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.omnirom.device.DeviceSettingsActivity"
+            android:exported="false"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:name="org.omnirom.device.DeviceSettings"
+            android:exported="true"
+            android:targetActivity="DeviceSettingsActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.omnirom.device.DEVICE_SETTING_PAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:name="org.omnirom.device.GestureSettingsActivity"
+            android:exported="false"
+            android:label="@string/category_gestures_title"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.omnirom.device.DozeSettingsActivity"
+            android:exported="false"
+            android:label="@string/doze_category_title"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.omnirom.device.AudioSettingsActivity"
+            android:exported="false"
+            android:label="@string/audiowizard_entry_title"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="org.omnirom.device.Startup"
+            android:exported="false" >
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="org.omnirom.device.GloveModeTileService"
+            android:icon="@drawable/ic_glove_tile"
+            android:label="@string/glove_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true" >
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="org.omnirom.device.VolumeTile"
+            android:icon="@drawable/ic_volume_ringer"
+            android:label="@string/volume_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="org.omnirom.device.FrameRateTileService"
+            android:icon="@drawable/ic_refresh_rate"
+            android:label="@string/refresh_rate_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true" >
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service android:name="org.omnirom.device.GripSensorServiceMain"
+                 android:permission="AsusGripSensorHelperService">
+        </service>
+    </application>
+</manifest>

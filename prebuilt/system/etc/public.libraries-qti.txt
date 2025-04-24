@@ -1,0 +1,4 @@
+libvraudio_client.qti.so
+libbinauralrenderer_wrapper.qti.so
+libhoaeffects.qti.so
+libQOC.qti.so

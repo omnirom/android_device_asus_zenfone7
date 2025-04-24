@@ -1,2 +1,25 @@
-get_prop(init, asus_sensors_prop)
+allow init {
+    xrom_file
+}:dir mounton;
 
+allow init {
+    demoapp_file
+    log_file
+    bat_file
+}:dir { create mounton relabelto};
+allow init demoapp_file:lnk_file r_file_perms;
+
+allow init vendor_motor_camera:file write;
+
+allow init asus_sensors_exec:file r_file_perms;
+allow init asus_sensors:process transition;
+
+allow init asus_sp_exec:file r_file_perms;
+allow init asus_sp:process transition;
+
+allow init lasercsc_exec:file r_file_perms;
+allow init lasercsc:process transition;
+
+allow init asus_storage_exec:file r_file_perms;
+
+get_prop(init, asus_sensors_prop)

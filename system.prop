@@ -156,6 +156,10 @@ ro.soc.model=SM8250
 external_storage.cross_user.enabled=1
 
 ro.vendor.qti.va_aosp.support=1
+
+# Common Add-on
+sys.vendor.qti.servicetracker.disable=true
+
 ####################################
 # from variable PRODUCT_SYSTEM_DEFAULT_PROPERTIES
 ####################################
