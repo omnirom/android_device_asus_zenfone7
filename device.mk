@@ -207,8 +207,7 @@ PRODUCT_PACKAGES += \
     libhwbinder
 
 # Init
-PRODUCT_PACKAGES += \
-    libinit_sm8250
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_sm8250)
 
 # Input
 PRODUCT_PACKAGES += \
