@@ -1253,7 +1253,6 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
-vendor/lib/libalsautils.so
 vendor/lib/libaoa.so
 vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libarcsoft_low_light_shot.so
@@ -1859,7 +1858,6 @@ vendor/lib64/libadiertac.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
-vendor/lib64/libalsautils.so
 vendor/lib64/libaoa.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_bokehplus_image.so
