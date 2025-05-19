@@ -10,16 +10,6 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 
 # Camera
-system/lib64/DataSet/arch/DIT_List.cfg
-system/lib64/DataSet/ditSCidGen/msgchk.db
-system/lib64/DataSet/ispDB/ParameterDB.db
-system/lib64/libxditk_DIT_MSMv1.so
-system/lib64/libxditk_DIT_Manager.so
-system/lib64/libxditk_ISP.so
-system/lib64/libxditk_arch.so
-system/lib64/libxditk_ditArchLIB.so
-system/lib64/libxditk_ditBSP.so
-system/lib64/libxditk_ditBSP_JNI.so
 system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2|bbd43b56c7c41b8212011c6300e3f8aa3c4b3cbb
 
 system_ext/etc/hdr_config/ans_off/ans_config.txt
