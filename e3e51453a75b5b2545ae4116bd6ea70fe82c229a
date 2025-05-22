@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "941160d0_9f97f6c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2025-05-22T23:46:11Z",
+      "side": 1,
+      "message": "depend of this \nhttps://github.com/omnirom/android_kernel_asus_sm8250/commit/34db1a6dfa27b157e6bce9cf752743dec8d01962",
+      "revId": "e3e51453a75b5b2545ae4116bd6ea70fe82c229a",
+      "serverId": "a6c39fa0-88d7-4027-9994-d2d73832020e"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
