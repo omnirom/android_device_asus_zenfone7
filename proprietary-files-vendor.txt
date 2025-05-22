@@ -1253,10 +1253,6 @@ vendor/lib/libadreno_utils.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libaoa.so
-vendor/lib/libarcsoft_dualcam_refocus.so
-vendor/lib/libarcsoft_low_light_shot.so
-vendor/lib/libarcsoft_super_night_raw.so
-vendor/lib/libarcsoft_superresolution.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
@@ -1361,7 +1357,6 @@ vendor/lib/libmiracast.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmm-omxcore.so
 vendor/lib/libmmosal.so
-vendor/lib/libmpbase.so
 vendor/lib/libmulawdec.so
 vendor/lib/libnative-api.so
 vendor/lib/libnetmgr.so
