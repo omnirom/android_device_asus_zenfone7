@@ -62,10 +62,6 @@ public class Startup extends BroadcastReceiver {
     public void onReceive(final Context context, final Intent bootintent) {
         maybeImportOldSettings(context);
         restoreAfterUserSwitch(context);
-        if (DeviceSettings.isRog3) {
-            context.startServiceAsUser(new Intent(context, GripSensorServiceMain.class),
-                UserHandle.CURRENT);
-        }
     }
 
     public static void restoreAfterUserSwitch(Context context) {
@@ -152,14 +148,6 @@ public class Startup extends BroadcastReceiver {
             DeviceSettings.changeFps(context, Integer.valueOf(value));
         } else {
         DeviceSettings.changeFps(context, Integer.valueOf(value));
-        }
-
-        if (DeviceSettings.isRog3) {
-            value = Settings.Global.getString(context.getContentResolver(), ASUS_GAMEMODE);
-            if (TextUtils.isEmpty(value)) {
-                value = "0";
-                Settings.Global.putString(context.getContentResolver(), ASUS_GAMEMODE, value);
-            }
         }
     }
 }

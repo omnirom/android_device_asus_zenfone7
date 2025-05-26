@@ -22,12 +22,8 @@ import android.service.quicksettings.TileService;
 
 public class FrameRateTileService extends TileService {
 
-    private static final boolean isRog3 = android.os.Build.DEVICE.equals("ASUS_I003_1");
     private static final String DEFAULT_FPS_VALUE = "60";
     private static final String FPS_VALUE_90 = "90";
-    private static final String FPS_VALUE_120 = "120";
-    private static final String FPS_VALUE_144 = "144";
-    private static final String FPS_VALUE_160 = "160";
 
     @Override
     public void onDestroy() {
@@ -57,15 +53,6 @@ public class FrameRateTileService extends TileService {
             case FPS_VALUE_90:
                 getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_90));
                 break;
-            case FPS_VALUE_120:
-                getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_120));
-                break;
-            case FPS_VALUE_144:
-                getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_144));
-                break;
-            case FPS_VALUE_160:
-                getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_160));
-                break;
         }
         getQsTile().updateTile();
     }
@@ -87,24 +74,6 @@ public class FrameRateTileService extends TileService {
                 getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_90));
                 break;
             case FPS_VALUE_90:
-                if (isRog3) {
-                    DeviceSettings.changeFps(this, Integer.valueOf(FPS_VALUE_120));
-                    getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_120));
-                    break;
-                } else {
-                    DeviceSettings.changeFps(this, Integer.valueOf(DEFAULT_FPS_VALUE));
-                    getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate));
-                    break;
-                }
-            case FPS_VALUE_120:
-                DeviceSettings.changeFps(this, Integer.valueOf(FPS_VALUE_144));
-                getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_144));
-                break;
-            case FPS_VALUE_144:
-                DeviceSettings.changeFps(this, Integer.valueOf(FPS_VALUE_160));
-                getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate_160));
-                break;
-            case FPS_VALUE_160:
                 DeviceSettings.changeFps(this, Integer.valueOf(DEFAULT_FPS_VALUE));
                 getQsTile().setIcon(Icon.createWithResource(this, R.drawable.ic_refresh_rate));
                 break;

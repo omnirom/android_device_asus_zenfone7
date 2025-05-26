@@ -254,9 +254,7 @@ public class GestureSettings extends PreferenceFragmentCompat implements
     private void setGestureEnabled(int id, boolean enabled) {
         Log.i("GestureSettings", "setGestureEnabled called with key=" +id+ ",enabled=" +enabled);
 
-        if (!DeviceSettings.isRog3) {
-            gestureMode = Integer.decode(Utils.readLine(OFFSCREEN_PATH).trim());
-        }
+        gestureMode = Integer.decode(Utils.readLine(OFFSCREEN_PATH).trim());
         int mask = ALL_GESTURE_MASKS[id];
 
         if (enabled)
