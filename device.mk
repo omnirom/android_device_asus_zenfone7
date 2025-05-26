@@ -169,7 +169,7 @@ PRODUCT_PACKAGES += \
 
 # Exclude vibrator from InputManager
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # fastbootd
 PRODUCT_PACKAGES += \

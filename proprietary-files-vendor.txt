@@ -1189,7 +1189,6 @@ vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib/hw/vendor.qti.sla.service@1.0-impl.so
-vendor/lib/hw/vibrator.default.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib/lib-imscmservice.so
 vendor/lib/lib-imsdpl.so
@@ -1787,7 +1786,6 @@ vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/hw/vendor.qti.sla.service@1.0-impl.so
-vendor/lib64/hw/vibrator.default.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/lib-imscmservice.so
 vendor/lib64/lib-imsdpl.so
@@ -2055,7 +2053,6 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libqtikeymaster4.so
-vendor/lib64/libqtivibratoreffect.so
 vendor/lib64/librcc.so
 vendor/lib64/librecovery_updater.so
 vendor/lib64/librecovery_updater_msm.so

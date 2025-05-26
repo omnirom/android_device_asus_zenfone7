@@ -112,6 +112,6 @@
     "remote": "gitlab",
     "repository": "android_vendor_qcom_opensource_vibrator",
     "target_path": "vendor/qcom/opensource/vibrator",
-    "revision": "android-13.0"
+    "revision": "android-15"
   }
 ]
