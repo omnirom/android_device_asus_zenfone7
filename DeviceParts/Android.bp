@@ -11,7 +11,6 @@ android_app {
         "com.google.android.material_material",
         "OmniLib",
         "OmniPreferenceTheme",
-        "vendor.goodix.hardware.biometrics.fingerprint-V2.1-java",
     ],
 
     srcs: [
