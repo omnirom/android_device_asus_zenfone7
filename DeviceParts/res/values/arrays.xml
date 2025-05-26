@@ -14,25 +14,9 @@
     <string-array name="frame_rate_entries" translatable="false">
         <item>60 Hz</item>
         <item>90 Hz</item>
-        <item>120 Hz</item>
-        <item>144 Hz</item>
-        <item>160 Hz</item>
     </string-array>
 
     <string-array name="frame_rate_values" translatable="false">
-        <item>60</item>
-        <item>90</item>
-        <item>120</item>
-        <item>144</item>
-        <item>160</item>
-    </string-array>
-
-    <string-array name="frame_rate_zf7_entries" translatable="false">
-        <item>60 Hz</item>
-        <item>90 Hz</item>
-    </string-array>
-
-    <string-array name="frame_rate_zf7_values" translatable="false">
         <item>60</item>
         <item>90</item>
     </string-array>
