@@ -9,12 +9,8 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="com.asus.focusapplistener.permission.GAME_GENIE_PROVIDER"/>
-    <uses-permission android:name="com.asus.hardwarestub.permission.FPS_CENTRAL_CONTROL_SERVICE"/>
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-    <protected-broadcast android:name="com.asus.airtriggers.SYSTEMUI_AIR_TRIGGER_ON" />
-    <protected-broadcast android:name="com.asus.airtriggers.SYSTEMUI_AIR_TRIGGER_OFF" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -74,16 +70,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="org.omnirom.device.AudioSettingsActivity"
-            android:exported="false"
-            android:label="@string/audiowizard_entry_title"
-            android:launchMode="singleTask" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         <receiver android:name="org.omnirom.device.Startup"
             android:exported="false" >
             <intent-filter android:priority="100" >
@@ -121,9 +107,6 @@
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </service>
-        <service android:name="org.omnirom.device.GripSensorServiceMain"
-                 android:permission="AsusGripSensorHelperService">
         </service>
     </application>
 </manifest>
