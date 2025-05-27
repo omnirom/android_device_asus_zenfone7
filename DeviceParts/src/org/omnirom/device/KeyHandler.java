@@ -348,6 +348,7 @@ public class KeyHandler implements DeviceKeyHandler {
             return false;
         }
         if (event.getScanCode() == KEY_SWIPEUP_GESTURE) {
+            OmniVibe.performHapticFeedbackLw(HapticFeedbackConstants.LONG_PRESS, false, mContext);
             return true;
         }
          String value = getGestureValueForScanCode(event.getScanCode());
