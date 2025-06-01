@@ -6,7 +6,7 @@
         glovemode.xml
         zenmotion.xml
 -->
-<manifest version="2.0" type="device" target-level="6">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
