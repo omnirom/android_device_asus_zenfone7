@@ -10,6 +10,7 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 
 # Camera
+system/etc/permissions/asus.software.smartgallery.xml
 system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2|bbd43b56c7c41b8212011c6300e3f8aa3c4b3cbb
 
 # Device
