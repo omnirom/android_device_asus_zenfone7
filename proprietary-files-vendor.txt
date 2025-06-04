@@ -1828,8 +1828,6 @@ vendor/lib64/libOmxVdec.so
 vendor/lib64/libOmxVenc.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
-# Move and rename to system this libOpenCL to prevent the missing variants (32) for libxditk_ISP and libxditk_ditArchLIB libs
-vendor/lib64/libOpenCL.so:system/lib64/libOpenCL_system.so;FIX_SONAME
 vendor/lib64/libOpenCL.so
 vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libQSEEComAPI.so
