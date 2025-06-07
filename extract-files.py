@@ -33,6 +33,13 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.imsrtpservice@3.0',
+        'libxditk_DIT_Manager',
+        'libxditk_ISP',
+        'libxditk_arch',
+        'libxditk_ditArchLIB',
+        'libxditk_ditBSP',
+        'libxditk_ditBSP_JNI',
+        'libxditk_DIT_MSMv1',
     ): lib_fixup_vendor_suffix,
     (
     ): lib_fixup_remove,
