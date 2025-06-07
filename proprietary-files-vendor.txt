@@ -1828,6 +1828,8 @@ vendor/lib64/libOmxVdec.so
 vendor/lib64/libOmxVenc.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
+# Move and rename to system this libOpenCL to prevent the missing variants (32) for libxditk_ISP and libxditk_ditArchLIB libsAdd commentMore actions
+vendor/lib64/libOpenCL.so:system/lib64/libOpenCL_system.so;FIX_SONAME
 vendor/lib64/libOpenCL.so
 vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libQSEEComAPI.so
@@ -2130,13 +2132,13 @@ vendor/lib64/libwebrtc_audio_preprocessing.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libwvhidl.so
-vendor/lib64/libxditk_DIT_MSMv1.so
-vendor/lib64/libxditk_DIT_Manager.so
-vendor/lib64/libxditk_ISP.so
-vendor/lib64/libxditk_arch.so
-vendor/lib64/libxditk_ditArchLIB.so
-vendor/lib64/libxditk_ditBSP.so
-vendor/lib64/libxditk_ditBSP_JNI.so
+vendor/lib64/libxditk_DIT_MSMv1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libxditk_DIT_Manager.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libxditk_ISP.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libxditk_arch.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libxditk_ditArchLIB.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libxditk_ditBSP.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libxditk_ditBSP_JNI.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libxml.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/mediacas/libclearkeycasplugin.so

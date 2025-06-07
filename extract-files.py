@@ -33,12 +33,22 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.imsrtpservice@3.0',
+        'libxditk_DIT_Manager',
+        'libxditk_ISP',
+        'libxditk_arch',
+        'libxditk_ditArchLIB',
+        'libxditk_ditBSP',
+        'libxditk_ditBSP_JNI',
+        'libxditk_DIT_MSMv1',
     ): lib_fixup_vendor_suffix,
     (
     ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
+    ('system/lib64/libxditk_ISP.so',
+     'system/lib64/libxditk_ditArchLIB.so'): blob_fixup()
+        .replace_needed('libOpenCL.so', 'libOpenCL_system.so'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
     'vendor/etc/seccomp_policy/qspm.policy': blob_fixup()
