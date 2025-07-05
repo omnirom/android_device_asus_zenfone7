@@ -85,12 +85,6 @@
      "revision": "android-15"
    },
    {
-     "remote": "omnirom",
-     "repository": "android_vendor_qcom_opensource_fm-commonsys",
-     "target_path": "vendor/qcom/opensource/commonsys/fm",
-     "revision": "android-16"
-   },
-   {
     "remote": "github",
     "repository": "LineageOS/android_vendor_qcom_opensource_healthd-ext",
     "target_path": "vendor/qcom/opensource/healthd-ext",
