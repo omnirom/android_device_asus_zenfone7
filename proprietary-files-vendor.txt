@@ -1145,7 +1145,6 @@ vendor/firmware/wigig/wigig.ini
 vendor/lib/android.hardware.automotive.vehicle@2.0-manager-lib.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/carwatchdog_aidl_interface-V2-ndk_platform.so
-vendor/lib/com.dsi.ant@1.0.so
 vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
@@ -1722,7 +1721,6 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/carwatchdog_aidl_interface-V2-ndk_platform.so
-vendor/lib64/com.dsi.ant@1.0.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.arcrawpro.so
 vendor/lib64/com.qti.feature2.demux.so
