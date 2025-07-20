@@ -344,7 +344,6 @@ vendor/etc/gps.conf
 vendor/etc/gpt_both0.bin
 vendor/etc/gpt_both0_16GB.bin
 vendor/etc/init.qti.fm.sh
-vendor/etc/init/android.hardware.authsecret@1.0-service-qti.rc
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
