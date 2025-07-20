@@ -3,20 +3,20 @@
     "remote": "omnirom",
     "repository": "android_device_qcom_caf-sepolicy",
     "target_path": "device/qcom/sepolicy",
-    "revision": "android-15"
+    "revision": "android-16"
    },
    {
     "remote": "omnirom",
     "repository": "android_device_qcom_sepolicy_vndr",
     "target_path": "device/qcom/sepolicy_vndr",
-    "revision": "android-15"
+    "revision": "android-16"
    },
    {
     "remote": "omnirom",
     "repository": "android_external_tinycompress",
     "target_path": "external/tinycompress",
     "override": "platform/external/tinycompress",
-    "revision": "android-15"
+    "revision": "android-16"
    },
    {
     "remote": "omnirom",
@@ -28,7 +28,7 @@
     "remote": "omnirom",
     "repository": "android_hardware_qcom_thermal",
     "target_path": "hardware/qcom-caf/thermal",
-    "revision": "android-15"
+    "revision": "android-16"
    },
    {
     "remote": "omnirom",
@@ -40,19 +40,19 @@
     "remote": "omnirom",
     "repository": "android_kernel_asus_sm8250",
     "target_path": "kernel/asus/sm8250",
-    "revision": "android-15"
+    "revision": "android-16"
    },
    {
     "remote": "omnirom",
     "repository": "android_vendor_codeaurora_telephony",
     "target_path": "vendor/codeaurora/telephony",
-    "revision": "android-15"
+    "revision": "android-16"
    },
    {
      "remote": "gitlab",
      "repository": "android_hardware_omni_compat",
      "target_path": "hardware/omni/compat",
-     "revision": "android-15"
+     "revision": "android-16"
    },
    {
     "remote": "omnirom",
@@ -88,7 +88,7 @@
      "remote": "omnirom",
      "repository": "android_vendor_qcom_opensource_fm-commonsys",
      "target_path": "vendor/qcom/opensource/commonsys/fm",
-     "revision": "android-14.0"
+     "revision": "android-16"
    },
    {
     "remote": "github",
