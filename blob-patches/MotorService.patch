@@ -1,0 +1,216 @@
+diff --git a/smali/b0/a.smali b/smali/b0/a.smali
+index 506a5b6..bf616c9 100644
+--- a/smali/b0/a.smali
++++ b/smali/b0/a.smali
+@@ -225,7 +225,7 @@
+ .end method
+ 
+ .method protected k()V
+-    .locals 3
++    .locals 4
+ 
+     const-string v0, "AudioDeviceWatcher"
+ 
+@@ -251,7 +251,9 @@
+ 
+     iget-object v2, p0, Lb0/a;->j:Landroid/content/BroadcastReceiver;
+ 
+-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v3, 0x2
++
++    invoke-virtual {v1, v2, v0, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     iget-object v0, p0, Lb0/a;->f:Landroid/media/MediaRouter;
+ 
+diff --git a/smali/b0/b.smali b/smali/b0/b.smali
+index 40eab5a..47682a4 100644
+--- a/smali/b0/b.smali
++++ b/smali/b0/b.smali
+@@ -177,7 +177,7 @@
+ .end method
+ 
+ .method protected k()V
+-    .locals 4
++    .locals 5
+ 
+     const-string v0, "CallStateWatcher"
+ 
+@@ -197,7 +197,9 @@
+ 
+     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+ 
+-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v4, 0x2
++
++    invoke-virtual {v0, v1, v2, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     invoke-virtual {p0}, Lb0/m;->g()V
+ 
+diff --git a/smali/com/asus/motorservice/e.smali b/smali/com/asus/motorservice/e.smali
+index ed0ac10..f0de3a4 100644
+--- a/smali/com/asus/motorservice/e.smali
++++ b/smali/com/asus/motorservice/e.smali
+@@ -26,7 +26,7 @@
+ 
+ # direct methods
+ .method constructor <init>(Landroid/content/Context;Lcom/asus/motorservice/e$c;)V
+-    .locals 1
++    .locals 2
+ 
+     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+ 
+@@ -56,7 +56,9 @@
+ 
+     invoke-direct {p2, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+ 
+-    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v1, 0x2
++
++    invoke-virtual {p0, p1, p2, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     return-void
+ .end method
+diff --git a/smali/com/asus/motorservice/g.smali b/smali/com/asus/motorservice/g.smali
+index 2642e42..95dd8d6 100644
+--- a/smali/com/asus/motorservice/g.smali
++++ b/smali/com/asus/motorservice/g.smali
+@@ -139,7 +139,7 @@
+ .end method
+ 
+ .method public constructor <init>(Landroid/content/Context;)V
+-    .locals 8
++    .locals 9
+ 
+     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+ 
+@@ -231,7 +231,9 @@
+ 
+     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+ 
+-    invoke-virtual {v0, p1, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v8, 0x2
++
++    invoke-virtual {v0, p1, v1, v8}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     new-instance p1, Lcom/asus/motorservice/g$b;
+ 
+diff --git a/smali/com/asus/motorservice/q.smali b/smali/com/asus/motorservice/q.smali
+index 529059e..d2317a4 100644
+--- a/smali/com/asus/motorservice/q.smali
++++ b/smali/com/asus/motorservice/q.smali
+@@ -516,7 +516,7 @@
+ .end method
+ 
+ .method private g0()V
+-    .locals 13
++    .locals 14
+ 
+     iget-object v0, p0, Lcom/asus/motorservice/q;->a:Landroid/content/Context;
+ 
+@@ -798,7 +798,9 @@
+ 
+     iget-object p0, p0, Lcom/asus/motorservice/q;->J:Landroid/content/BroadcastReceiver;
+ 
+-    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v13, 0x2
++
++    invoke-virtual {v1, p0, v0, v13}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     return-void
+ .end method
+diff --git a/smali/com/google/android/gms/measurement/internal/o3.smali b/smali/com/google/android/gms/measurement/internal/o3.smali
+index 3b58069..87b3241 100644
+--- a/smali/com/google/android/gms/measurement/internal/o3.smali
++++ b/smali/com/google/android/gms/measurement/internal/o3.smali
+@@ -136,7 +136,7 @@
+ .end method
+ 
+ .method public final c()V
+-    .locals 3
++    .locals 4
+ 
+     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/o3;->a:Lcom/google/android/gms/measurement/internal/z7;
+ 
+@@ -169,7 +169,9 @@
+ 
+     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+ 
+-    invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v3, 0x2
++
++    invoke-virtual {v0, p0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/o3;->a:Lcom/google/android/gms/measurement/internal/z7;
+ 
+diff --git a/smali/com/google/firebase/iid/l.smali b/smali/com/google/firebase/iid/l.smali
+index d55eade..0df929c 100644
+--- a/smali/com/google/firebase/iid/l.smali
++++ b/smali/com/google/firebase/iid/l.smali
+@@ -24,7 +24,7 @@
+ 
+ # virtual methods
+ .method public final a()V
+-    .locals 2
++    .locals 3
+ 
+     invoke-static {}, Lcom/google/firebase/iid/FirebaseInstanceId;->y()Z
+ 
+@@ -51,7 +51,9 @@
+ 
+     move-result-object v1
+ 
+-    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v2, 0x2
++
++    invoke-virtual {v1, p0, v0,v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     return-void
+ .end method
+diff --git a/smali/z/i0.smali b/smali/z/i0.smali
+index 9f533d1..058a695 100644
+--- a/smali/z/i0.smali
++++ b/smali/z/i0.smali
+@@ -16,7 +16,7 @@
+ 
+ # direct methods
+ .method public constructor <init>(Landroid/content/Context;)V
+-    .locals 3
++    .locals 4
+ 
+     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+ 
+@@ -50,7 +50,9 @@
+ 
+     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+ 
+-    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v3, 0x2
++
++    invoke-virtual {p1, v0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     :cond_0
+     invoke-direct {p0}, Lz/i0;->f()Z
+diff --git a/smali/z0/b$f.smali b/smali/z0/b$f.smali
+index 3322efe..296d069 100644
+--- a/smali/z0/b$f.smali
++++ b/smali/z0/b$f.smali
+@@ -66,7 +66,7 @@
+ .end method
+ 
+ .method private static b(Landroid/content/Context;)V
+-    .locals 3
++    .locals 4
+ 
+     sget-object v0, Lz0/b$f;->b:Ljava/util/concurrent/atomic/AtomicReference;
+ 
+@@ -96,7 +96,9 @@
+ 
+     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+ 
+-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v3, 0x2
++
++    invoke-virtual {p0, v0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     :cond_0
+     return-void
