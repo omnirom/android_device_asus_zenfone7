@@ -1798,7 +1798,7 @@ vendor/lib64/lib-rtpsl.so
 vendor/lib64/lib-siputility.so
 vendor/lib64/lib-uceservice.so
 vendor/lib64/libAsusBspCam_hidl.so
-vendor/lib64/libAsusMotorDriverHAL.so
+vendor/lib64/libAsusMotorDriverHAL.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libAsusRGBSensorHAL.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
