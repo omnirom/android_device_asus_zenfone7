@@ -136,8 +136,12 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Motor
 system/etc/permissions/asus.hardware.motor.latch_lock.xml
-system/priv-app/MotorService/MotorService.apk|2651188c511717b855417cab61d277e19dd8cd23
-system/priv-app/MotorK/MotorK.apk|ab30444ad1443e355472742731f207854b9583c1
+system/priv-app/MotorService/MotorService.apk
+system/priv-app/MotorService/lib/arm64/libjni_motor.so:system/lib64/libjni_motor.so;SYMLINK=system/priv-app/MotorService/lib/arm64/libjni_motor.so
+system/priv-app/MotorK/MotorK.apk
+system/priv-app/MotorK/lib/arm64/libmotork-jni.so:system/lib64/libmotork-jni.so;SYMLINK=system/priv-app/MotorK/lib/arm64/libmotork-jni.so
+# Motor symlink for identical libs
+system/lib64/libAsusMotorDriverHAL.so|13e73681c168e8d22e09de925588cc3e6093f237;SYMLINK=system/priv-app/MotorService/lib/arm64/libAsusMotorDriverHAL.so;SYMLINK=system/priv-app/MotorK/lib/arm64/libAsusMotorDriverHAL.so
 
 # Telephony
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml

@@ -33,6 +33,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.imsrtpservice@3.0',
+        'ibAsusMotorDriverHAL'
         'libxditk_DIT_Manager',
         'libxditk_ISP',
         'libxditk_arch',
