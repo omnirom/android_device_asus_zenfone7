@@ -137,7 +137,7 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Motor
 system/etc/permissions/asus.hardware.motor.latch_lock.xml
-system/priv-app/MotorService/MotorService.apk|75535646edd80097a3461b599f4c5ef9b27fabff
+system/priv-app/MotorService/MotorService.apk|2651188c511717b855417cab61d277e19dd8cd23
 system/priv-app/MotorK/MotorK.apk|ab30444ad1443e355472742731f207854b9583c1
 
 # Telephony
