@@ -114,9 +114,10 @@ BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r416183b
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
-TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1 LLVM_IAS=1
 TARGET_KERNEL_SOURCE := kernel/asus/sm8250
 TARGET_KERNEL_CONFIG := vendor/zf7_defconfig
 
