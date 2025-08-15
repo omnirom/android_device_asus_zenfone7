@@ -280,7 +280,6 @@ vendor/etc/audio_platform_info.xml
 vendor/etc/audio_platform_info_intcodec.xml
 vendor/etc/audio_platform_info_intcodec_ZS670KS.xml
 vendor/etc/audio_platform_info_qrd.xml
-vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/vidhance_calibration
 vendor/etc/charger_fstab.qti
