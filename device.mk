@@ -183,7 +183,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2
+    FM2 \
+    fm_helium
 
 # Health
 PRODUCT_PACKAGES += \
