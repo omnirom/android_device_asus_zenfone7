@@ -105,6 +105,7 @@ on post-fs-data
 # ASUS_SZ_BSP Yadong: Touch ---
 
 # Charger
+    chown system system /sys/class/power_supply/battery/device/smartchg_slow_charging
     chown system system /sys/class/power_supply/battery/device/smartchg_stop_charging
 
 #####################################################
