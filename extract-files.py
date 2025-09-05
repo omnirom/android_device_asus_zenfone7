@@ -47,6 +47,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system/priv-app/AsusCamera/AsusCamera.apk': blob_fixup()
+        .apktool_patch('blob-patches/AsusCamera.patch', '-s'),
     'system/priv-app/MotorService/MotorService.apk': blob_fixup()
         .apktool_patch('blob-patches/MotorService.patch'),
     ('system/lib64/libxditk_ISP.so',
