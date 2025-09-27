@@ -22,7 +22,7 @@ system/lib64/libxditk_ditArchLIB.so
 system/lib64/libxditk_ditBSP.so
 system/lib64/libxditk_ditBSP_JNI.so
 system_ext/lib64/libOpenCL_system.so
-system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2|bbd43b56c7c41b8212011c6300e3f8aa3c4b3cbb
+system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2|bbd43b56c7c41b8212011c6300e3f8aa3c4b3cbb|59dba9bf6ac4047abd83cc2acf6e0771f0f0dc76
 
 # Device
 product/app/DeviceStatisticsService/DeviceStatisticsService.apk
