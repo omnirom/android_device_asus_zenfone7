@@ -91,6 +91,12 @@
     "revision": "lineage-22.2"
    },
    {
+    "remote": "omnirom",
+    "repository": "android_vendor_qcom_opensource_data-ipa-cfg-mgr",
+    "target_path": "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
+    "revision": "android-16"
+   },
+   {
      "remote": "omnirom",
      "repository": "android_vendor_qcom_opensource_interfaces",
      "target_path": "vendor/qcom/opensource/interfaces",

@@ -135,8 +135,6 @@ vendor/bin/init.qti.dcvs.sh
 vendor/bin/init.qti.ims.sh
 vendor/bin/init.qti.media.sh
 vendor/bin/init.qti.qcv.sh
-vendor/bin/ipacm
-vendor/bin/ipacm-diag
 vendor/bin/is_keybox_valid
 vendor/bin/is_keymaster_valid
 vendor/bin/ks
@@ -242,7 +240,6 @@ vendor/bin/widevine.sh
 vendor/bin/writekey
 vendor/bin/xtra-daemon
 vendor/etc/IMEI_whitelist.txt
-vendor/etc/IPACM_cfg.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/acdbdata/MTP/ER2/MTP_Bluetooth_cal_ER2.acdb
 vendor/etc/acdbdata/MTP/ER2/MTP_General_cal_ER2.acdb
@@ -379,8 +376,6 @@ vendor/etc/init/init.vendor.qti.spu@1.0-service.rc
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/init/ipa_fws.rc
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/ipacm.rc
 vendor/etc/init/mutualex.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
@@ -1954,7 +1949,6 @@ vendor/lib64/libhfp.so
 vendor/lib64/libhta_hexagon_runtime.so
 vendor/lib64/libhwminijail.so
 vendor/lib64/libidl.so
-vendor/lib64/libipanat.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
@@ -2002,7 +1996,6 @@ vendor/lib64/libnpu.so
 vendor/lib64/liboemaids_vendor.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libofflinelog.so
-vendor/lib64/liboffloadhal.so
 vendor/lib64/libopenvx.so
 vendor/lib64/libops.so
 vendor/lib64/libos.so
