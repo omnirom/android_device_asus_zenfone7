@@ -332,7 +332,6 @@ vendor/etc/firmware/goodixfp.b06
 vendor/etc/firmware/goodixfp.b07
 vendor/etc/firmware/goodixfp.mdt
 vendor/etc/flp.conf
-vendor/etc/fstab.qcom
 vendor/etc/ftm_test_config_kona-qrd-snd-card
 vendor/etc/g2_gyro2_factory_init.sh
 vendor/etc/gpfspath_oem_config.xml
