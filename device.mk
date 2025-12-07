@@ -124,7 +124,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     CameraTile
 
-$(call soong_config_set,camera,camera_needs_client_info,true)
+$(call soong_config_set_bool,camera,camera_needs_client_info,true)
 
 # Cas
 PRODUCT_PACKAGES += \
