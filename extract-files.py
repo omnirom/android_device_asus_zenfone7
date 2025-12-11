@@ -75,6 +75,9 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('13 0A 00 94', '1F 20 03 D5'),
     'vendor/lib64/camera/components/com.vidhance.node.processing.so': blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so'),
+    ('vendor/lib/libdpps.so',
+     'vendor/lib64/libdpps.so'): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
