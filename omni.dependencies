@@ -60,6 +60,18 @@
     "target_path": "hardware/qcom-caf/sm8250/display",
     "revision": "android-16-sm8250"
    },
+  {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_display",
+    "target_path": "hardware/qcom-caf/sm8350/display",
+    "revision": "android-16-sm8350"
+  },
+  {
+    "remote": "github",
+    "repository": "android_hardware_qcom_display",
+    "target_path": "hardware/qcom-caf/sm8450/display",
+    "revision": "android-16-sm8450"
+  },
    {
     "remote": "github",
     "repository": "LineageOS/android_vendor_qcom_opensource_core-utils-vendor",
